@@ -1,0 +1,72 @@
+import { lessons } from '../data/lessons'
+
+interface HomeProps {
+  completed: Set<string>
+  progressPercent: number
+  onStart: () => void
+  onSelectLesson: (id: string) => void
+}
+
+export function Home({ completed, progressPercent, onStart, onSelectLesson }: HomeProps) {
+  return (
+    <div className="home">
+      <div className="home-hero">
+        <div className="hero-badge">無料 · ブラウザで学べる</div>
+        <h1>
+          <span className="hero-accent">パフォーマンス</span> を
+          <br />
+          ゼロから学ぶ
+        </h1>
+        <p className="hero-sub">
+          Core Web Vitals、画像最適化、バンドルサイズなど Web の高速化を10レッスンで学びます。
+          環境構築不要、今すぐ始められます。
+        </p>
+        <button className="btn-primary btn-large" onClick={onStart}>
+          {progressPercent > 0 ? '学習を続ける' : '学習を始める'} →
+        </button>
+        {progressPercent > 0 && (
+          <p className="hero-progress">進捗: {progressPercent}% 完了</p>
+        )}
+      </div>
+
+      <div className="home-features">
+        <div className="feature-card">
+          <span className="feature-icon">🎯</span>
+          <h3>インタラクティブ</h3>
+          <p>パフォーマンス指標をビジュアルで確認し、改善のポイントを学べます。</p>
+        </div>
+        <div className="feature-card">
+          <span className="feature-icon">📖</span>
+          <h3>日本語で解説</h3>
+          <p>初心者向けにわかりやすく、コード例も豊富です。</p>
+        </div>
+        <div className="feature-card">
+          <span className="feature-icon">💾</span>
+          <h3>進捗を保存</h3>
+          <p>ブラウザに自動保存。いつでも続きから学べます。</p>
+        </div>
+      </div>
+
+      <div className="home-lessons">
+        <h2>レッスン一覧</h2>
+        <div className="lesson-grid">
+          {lessons.map((lesson, index) => (
+            <button
+              key={lesson.id}
+              className={`lesson-card ${completed.has(lesson.id) ? 'done' : ''}`}
+              onClick={() => onSelectLesson(lesson.id)}
+            >
+              <span className="lesson-card-number">
+                {completed.has(lesson.id) ? '✓' : index + 1}
+              </span>
+              <div>
+                <strong>{lesson.title}</strong>
+                <p>{lesson.description}</p>
+              </div>
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
