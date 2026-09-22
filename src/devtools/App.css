@@ -37,7 +37,7 @@
 /* ── Home ── */
 .home { max-width: 960px; margin: 0 auto; padding: 3rem 2rem 4rem; }
 .home-hero { text-align: center; padding: 4rem 0 3rem; }
-.hero-badge { display: inline-block; background: var(--accent-bg); color: var(--accent); font-size: 0.8rem; font-weight: 600; padding: 0.35rem 1rem; border-radius: 999px; border: 1px solid rgba(59, 130, 246, 0.3); margin-bottom: 1.5rem; }
+.hero-badge { display: inline-block; background: var(--accent-bg); color: var(--accent); font-size: 0.8rem; font-weight: 600; padding: 0.35rem 1rem; border-radius: 999px; border: 1px solid var(--border); margin-bottom: 1.5rem; }
 .home-hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 700; color: var(--text-heading); line-height: 1.15; margin-bottom: 1.25rem; letter-spacing: -0.02em; }
 .hero-accent { background: linear-gradient(135deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .hero-sub { font-size: 1.1rem; color: var(--text-muted); max-width: 520px; margin: 0 auto 2rem; }
@@ -202,3 +202,68 @@
 .perf-bar-row { display: grid; grid-template-columns: 80px 1fr 40px; gap: 0.5rem; align-items: center; font-size: 0.8rem; }
 .perf-bar-track { height: 8px; background: var(--bg-3); border-radius: 4px; overflow: hidden; }
 .perf-bar-fill { height: 100%; background: var(--accent); border-radius: 4px; }
+
+.home-quiz {
+  margin-bottom: 2.5rem;
+}
+
+.home-quiz-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.home-quiz-icon {
+  font-size: 1.75rem;
+  flex-shrink: 0;
+}
+
+.home-quiz-card h2 {
+  font-size: 1rem;
+  color: var(--text-heading);
+  margin-bottom: 0.2rem;
+}
+
+.home-quiz-card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.home-quiz-card .btn-secondary {
+  margin-left: auto;
+  flex-shrink: 0;
+  padding: 0.55rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-3);
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.home-quiz-card .btn-secondary:hover {
+  border-color: var(--accent, #a855f7);
+}
+
+.quiz-nav-item {
+  margin-top: 0.5rem;
+  border-top: 1px solid var(--border);
+  padding-top: 0.75rem !important;
+}
+
+@media (max-width: 640px) {
+  .home-quiz-card {
+    flex-wrap: wrap;
+  }
+
+  .home-quiz-card .btn-secondary {
+    margin-left: 0;
+    width: 100%;
+  }
+}

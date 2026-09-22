@@ -6,6 +6,7 @@ interface SidebarProps {
   progressPercent: number
   onSelect: (id: string) => void
   onReset: () => void
+  onOpenQuiz: () => void
 }
 
 export function Sidebar({
@@ -14,6 +15,7 @@ export function Sidebar({
   progressPercent,
   onSelect,
   onReset,
+  onOpenQuiz,
 }: SidebarProps) {
   return (
     <aside className="sidebar">
@@ -48,6 +50,11 @@ export function Sidebar({
             </button>
           )
         })}
+
+      <button type="button" className="lesson-nav-item quiz-nav-item" onClick={onOpenQuiz}>
+        <span className="lesson-number">📝</span>
+        <span className="lesson-nav-text">クイズ</span>
+      </button>
       </nav>
 
       <button className="reset-btn" onClick={onReset}>

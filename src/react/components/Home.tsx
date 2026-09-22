@@ -5,9 +5,10 @@ interface HomeProps {
   progressPercent: number
   onStart: () => void
   onSelectLesson: (id: string) => void
+  onOpenQuiz: () => void
 }
 
-export function Home({ completed, progressPercent, onStart, onSelectLesson }: HomeProps) {
+export function Home({ completed, progressPercent, onStart, onSelectLesson, onOpenQuiz }: HomeProps) {
   return (
     <div className="home">
       <div className="home-hero">
@@ -47,6 +48,7 @@ export function Home({ completed, progressPercent, onStart, onSelectLesson }: Ho
         </div>
       </div>
 
+
       <div className="home-lessons">
         <h2>レッスン一覧</h2>
         <div className="lesson-grid">
@@ -65,6 +67,19 @@ export function Home({ completed, progressPercent, onStart, onSelectLesson }: Ho
               </div>
             </button>
           ))}
+        </div>
+      </div>
+
+      <div className="home-quiz">
+        <div className="home-quiz-card">
+          <span className="home-quiz-icon">📝</span>
+          <div>
+            <h2>理解度チェック</h2>
+            <p>レッスンの内容をクイズで確認できます。</p>
+          </div>
+          <button type="button" className="btn-secondary" onClick={onOpenQuiz}>
+            クイズに挑戦 →
+          </button>
         </div>
       </div>
     </div>

@@ -5,6 +5,8 @@ import { useProgress } from './hooks/useProgress'
 import { Home } from './components/Home'
 import { Sidebar } from './components/Sidebar'
 import { LessonView } from './components/LessonView'
+import { QuizPage } from '../components/quiz/QuizPage'
+import { quizQuestions } from './data/quiz'
 import './App.css'
 
 const BASE = '/css'
@@ -14,7 +16,8 @@ export default function CssTutorial() {
   const navigate = useNavigate()
   const { completed, markComplete, resetProgress, progressPercent } = useProgress()
 
-  const isLessonView = lessonId !== undefined
+  const isQuizView = lessonId === 'quiz'
+  const isLessonView = lessonId !== undefined && !isQuizView
   const currentLessonId = lessonId ?? lessons[0].id
   const currentIndex = lessons.findIndex((l) => l.id === currentLessonId)
 
@@ -22,7 +25,7 @@ export default function CssTutorial() {
   const lessonTopRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    if (lessonId && !lessons.find((l) => l.id === lessonId)) {
+    if (lessonId && lessonId !== 'quiz' && !lessons.find((l) => l.id === lessonId)) {
       navigate(BASE, { replace: true })
     }
   }, [lessonId, navigate])
@@ -37,19 +40,33 @@ export default function CssTutorial() {
 
   useLayoutEffect(() => {
     if (isLessonView) scrollToTop()
-  }, [currentLessonId, isLessonView])
+  }, [currentLessonId, isLessonView, isQuizView])
 
   const goToLesson = (id: string) => navigate(`${BASE}/${id}`)
   const goHome = () => navigate(BASE)
+  const goToQuiz = () => navigate(`${BASE}/quiz`)
 
   const startLearning = () => {
     const firstIncomplete = lessons.find((l) => !completed.has(l.id))
     goToLesson(firstIncomplete?.id ?? lessons[0].id)
   }
 
+  if (isQuizView) {
+    return (
+      <div className="tutorial-theme">
+        <QuizPage
+          courseTitle="CSS"
+          storageKey="css-tutorial-quiz"
+          questions={quizQuestions}
+          onBack={goHome}
+        />
+      </div>
+    )
+  }
+
   if (!isLessonView) {
     return (
-      <div className="tutorial-theme-css">
+      <div className="tutorial-theme">
         <Link to="/" className="hub-back-link">← チュートリアル一覧</Link>
         <div className="app app-home">
           <Home
@@ -57,6 +74,7 @@ export default function CssTutorial() {
             progressPercent={progressPercent}
             onStart={startLearning}
             onSelectLesson={goToLesson}
+            onOpenQuiz={goToQuiz}
           />
         </div>
       </div>
@@ -64,7 +82,7 @@ export default function CssTutorial() {
   }
 
   return (
-    <div className="tutorial-theme-css">
+    <div className="tutorial-theme">
       <div className="app">
         <Sidebar
           currentId={currentLessonId}
@@ -72,6 +90,7 @@ export default function CssTutorial() {
           progressPercent={progressPercent}
           onSelect={goToLesson}
           onReset={resetProgress}
+          onOpenQuiz={goToQuiz}
         />
         <div className="main-area" ref={mainAreaRef}>
           <div ref={lessonTopRef} />

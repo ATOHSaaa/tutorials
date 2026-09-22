@@ -276,6 +276,9 @@ const tutorials = [
   },
 ]
 
+// NOTE: 手書きの lessons.ts があるコースを再生成するとプレースホルダーに戻ります。
+// 既存コースの lessons.ts は編集のみ行い、このスクリプトでの上書きは避けてください。
+
 function lessonContent(tutorial, lesson) {
   const sections = [
     {
