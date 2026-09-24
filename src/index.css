@@ -105,6 +105,28 @@ select {
   font-weight: 600;
 }
 
+.content-section .lesson-list {
+  margin: 0 0 1rem 1.25rem;
+  padding-left: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.content-section ul.lesson-list {
+  list-style: disc;
+}
+
+.content-section ol.lesson-list {
+  list-style: decimal;
+}
+
+.content-section .lesson-list li {
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
 .tip-box strong {
   color: inherit;
   font-weight: 600;
