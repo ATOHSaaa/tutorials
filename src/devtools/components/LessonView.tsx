@@ -1,7 +1,6 @@
 import { lessons } from '../data/lessons'
 import { LessonParagraph, renderLessonText } from '../../components/LessonRichText'
 import { CodeBlock } from './CodeBlock'
-import { LessonDemo } from './demos/LessonDemos'
 
 interface LessonViewProps {
   lessonId: string
@@ -34,13 +33,6 @@ export function LessonView({
         <h1>{lesson.title}</h1>
         <p className="lesson-description">{lesson.description}</p>
       </header>
-
-      <div className="lesson-demo-section">
-        <h2 className="section-label">
-          <span className="section-icon">▶</span> インタラクティブデモ
-        </h2>
-        <LessonDemo lessonId={lessonId} />
-      </div>
 
       <div className="lesson-content">
         {lesson.sections.map((section, i) => (
