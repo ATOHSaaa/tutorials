@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
 
-const BOLD_PATTERN = /(\*\*[^*]+?\*\*)/g
+const INLINE_PATTERN = /(\*\*[^*]+?\*\*|`[^`\n]+?`)/g
 const BULLET_LINE = /^[•\-]\s?/
 const NUMBERED_LINE = /^\d+\.\s/
 
@@ -10,10 +10,17 @@ type Segment =
   | { type: 'ol'; items: string[] }
 
 export function renderLessonText(text: string): React.ReactNode[] {
-  const parts = text.split(BOLD_PATTERN)
+  const parts = text.split(INLINE_PATTERN)
   return parts.map((part, index) => {
     if (part.startsWith('**') && part.endsWith('**') && part.length > 4) {
       return <strong key={index}>{part.slice(2, -2)}</strong>
+    }
+    if (part.startsWith('`') && part.endsWith('`') && part.length > 2) {
+      return (
+        <code key={index} className="lesson-inline-code">
+          {part.slice(1, -1)}
+        </code>
+      )
     }
     return part ? <Fragment key={index}>{part}</Fragment> : null
   })

@@ -1,17 +1,15 @@
-import { useNavigate } from 'react-router-dom'
+import { SiteLink } from './SiteLink'
 import { useGlobalLevel } from '../hooks/useGlobalLevel'
 import './LevelButton.css'
 
 export function LevelButton() {
   const stats = useGlobalLevel()
-  const navigate = useNavigate()
 
   return (
     <div className="level-button-wrap">
-      <button
-        type="button"
+      <SiteLink
+        href="/mypage"
         className="level-button"
-        onClick={() => navigate('/mypage')}
         aria-label={`レベル ${stats.level.level}。マイページを開く`}
       >
         <span className="level-button-ring" />
@@ -19,7 +17,7 @@ export function LevelButton() {
           <span className="level-button-lv">Lv</span>
           <span className="level-button-num">{stats.level.level}</span>
         </span>
-      </button>
+      </SiteLink>
 
       <div className="level-popover" role="tooltip">
         <div className="level-popover-header">

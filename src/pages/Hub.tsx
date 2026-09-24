@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { SiteLink } from '../components/SiteLink'
 import { coreTutorials, frameworkTutorials, practiceTutorials, totalLessons, tutorials } from '../data/tutorials'
 import { getCourseProgressPercent } from '../lib/globalStats'
 import { SiteTitle } from '../components/SiteTitle'
@@ -10,7 +10,7 @@ function TutorialCardList({ tutorials: list }: { tutorials: typeof tutorials }) 
       {list.map((t) => {
         const progress = getCourseProgressPercent(t.storageKey, t.lessons)
         return (
-          <Link key={t.path} to={t.path} className="hub-card">
+          <SiteLink key={t.path} href={t.path} className="hub-card">
             <div className="hub-card-icon" style={{ background: t.gradient }}>
               {t.icon}
             </div>
@@ -33,7 +33,7 @@ function TutorialCardList({ tutorials: list }: { tutorials: typeof tutorials }) 
               )}
             </div>
             <span className="hub-card-arrow">→</span>
-          </Link>
+          </SiteLink>
         )
       })}
     </div>
@@ -79,14 +79,14 @@ export function Hub() {
       </section>
 
       <section className="hub-quiz-banner">
-        <Link to="/quizzes" className="hub-quiz-banner-card">
+        <SiteLink href="/quizzes" className="hub-quiz-banner-card">
           <span className="hub-quiz-banner-icon">📝</span>
           <div>
             <h2>理解度チェック</h2>
             <p>全{tutorials.length}コースのクイズを一覧から挑戦できます</p>
           </div>
           <span className="hub-quiz-banner-arrow">→</span>
-        </Link>
+        </SiteLink>
       </section>
 
       <footer className="hub-footer">

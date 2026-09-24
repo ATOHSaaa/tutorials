@@ -1,21 +1,20 @@
+import { sitePath } from '../../lib/paths'
 import { lessons } from '../data/lessons'
 
 interface SidebarProps {
+  basePath: string
   currentId: string
   completed: Set<string>
   progressPercent: number
-  onSelect: (id: string) => void
   onReset: () => void
-  onOpenQuiz: () => void
 }
 
 export function Sidebar({
+  basePath,
   currentId,
   completed,
   progressPercent,
-  onSelect,
   onReset,
-  onOpenQuiz,
 }: SidebarProps) {
   return (
     <aside className="sidebar">
@@ -38,23 +37,23 @@ export function Sidebar({
           const isActive = lesson.id === currentId
           const isDone = completed.has(lesson.id)
           return (
-            <button
+            <a
               key={lesson.id}
+              href={sitePath(`${basePath}/${lesson.id}`)}
               className={`lesson-nav-item ${isActive ? 'active' : ''} ${isDone ? 'done' : ''}`}
-              onClick={() => onSelect(lesson.id)}
             >
               <span className="lesson-number">
                 {isDone ? '✓' : index + 1}
               </span>
               <span className="lesson-nav-text">{lesson.title}</span>
-            </button>
+            </a>
           )
         })}
 
-      <button type="button" className="lesson-nav-item quiz-nav-item" onClick={onOpenQuiz}>
+      <a href={sitePath(`${basePath}/quiz`)} className="lesson-nav-item quiz-nav-item">
         <span className="lesson-number">📝</span>
         <span className="lesson-nav-text">クイズ</span>
-      </button>
+      </a>
       </nav>
 
       <button className="reset-btn" onClick={onReset}>
