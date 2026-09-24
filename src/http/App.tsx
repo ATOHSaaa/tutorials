@@ -1,5 +1,7 @@
 import { useEffect, useLayoutEffect, useRef } from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
+import { SiteLink } from '../components/SiteLink'
+import { sitePath } from '../lib/paths'
 import { lessons } from './data/lessons'
 import { useProgress } from './hooks/useProgress'
 import { Home } from './components/Home'
@@ -13,7 +15,6 @@ const BASE = '/http'
 
 export default function HttpTutorial() {
   const { lessonId } = useParams()
-  const navigate = useNavigate()
   const { completed, markComplete, resetProgress, progressPercent } = useProgress()
 
   const isQuizView = lessonId === 'quiz'
@@ -26,9 +27,9 @@ export default function HttpTutorial() {
 
   useEffect(() => {
     if (lessonId && lessonId !== 'quiz' && !lessons.find((l) => l.id === lessonId)) {
-      navigate(BASE, { replace: true })
+      window.location.replace(sitePath(BASE))
     }
-  }, [lessonId, navigate])
+  }, [lessonId])
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'instant' })
@@ -42,9 +43,8 @@ export default function HttpTutorial() {
     if (isLessonView) scrollToTop()
   }, [currentLessonId, isLessonView, isQuizView])
 
-  const goToLesson = (id: string) => navigate(`${BASE}/${id}`)
-  const goHome = () => navigate(BASE)
-  const goToQuiz = () => navigate(`${BASE}/quiz`)
+  const goToLesson = (id: string) => window.location.href = sitePath(`${BASE}/${id}`)
+  const goHome = () => window.location.href = sitePath(BASE)
 
   const startLearning = () => {
     const firstIncomplete = lessons.find((l) => !completed.has(l.id))
@@ -67,14 +67,13 @@ export default function HttpTutorial() {
   if (!isLessonView) {
     return (
       <div className="tutorial-theme">
-        <Link to="/" className="hub-back-link">← チュートリアル一覧</Link>
+        <SiteLink href="/" className="hub-back-link">← チュートリアル一覧</SiteLink>
         <div className="app app-home">
           <Home
+            basePath={BASE}
             completed={completed}
             progressPercent={progressPercent}
             onStart={startLearning}
-            onSelectLesson={goToLesson}
-            onOpenQuiz={goToQuiz}
           />
         </div>
       </div>
@@ -85,18 +84,17 @@ export default function HttpTutorial() {
     <div className="tutorial-theme">
       <div className="app">
         <Sidebar
+          basePath={BASE}
           currentId={currentLessonId}
           completed={completed}
           progressPercent={progressPercent}
-          onSelect={goToLesson}
           onReset={resetProgress}
-          onOpenQuiz={goToQuiz}
         />
         <div className="main-area" ref={mainAreaRef}>
           <div ref={lessonTopRef} />
           <div className="top-links">
-            <button className="home-link" onClick={goHome}>← チュートリアルトップ</button>
-            <Link to="/" className="home-link">チュートリアル一覧</Link>
+            <SiteLink href={BASE} className="home-link">← チュートリアルトップ</SiteLink>
+            <SiteLink href="/" className="home-link">チュートリアル一覧</SiteLink>
           </div>
           <LessonView
             lessonId={currentLessonId}

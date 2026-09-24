@@ -131,3 +131,20 @@ select {
   color: inherit;
   font-weight: 600;
 }
+
+a.lesson-nav-item,
+a.lesson-card,
+a.home-link,
+a.level-button,
+a.btn-secondary,
+a.hub-card,
+a.hub-quiz-banner-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+a.lesson-nav-item:visited,
+a.lesson-card:visited,
+a.home-link:visited {
+  color: inherit;
+}

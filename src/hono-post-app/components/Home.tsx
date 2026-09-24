@@ -1,14 +1,14 @@
+import { sitePath } from '../../lib/paths'
 import { lessons } from '../data/lessons'
 
 interface HomeProps {
+  basePath: string
   completed: Set<string>
   progressPercent: number
   onStart: () => void
-  onSelectLesson: (id: string) => void
-  onOpenQuiz: () => void
 }
 
-export function Home({ completed, progressPercent, onStart, onSelectLesson, onOpenQuiz }: HomeProps) {
+export function Home({ basePath, completed, progressPercent, onStart }: HomeProps) {
   return (
     <div className="home">
       <div className="home-hero">
@@ -47,10 +47,10 @@ export function Home({ completed, progressPercent, onStart, onSelectLesson, onOp
         <h2>レッスン一覧</h2>
         <div className="lesson-grid">
           {lessons.map((lesson, index) => (
-            <button
+            <a
               key={lesson.id}
+              href={sitePath(`${basePath}/${lesson.id}`)}
               className={`lesson-card ${completed.has(lesson.id) ? 'done' : ''}`}
-              onClick={() => onSelectLesson(lesson.id)}
             >
               <span className="lesson-card-number">
                 {completed.has(lesson.id) ? '✓' : index + 1}
@@ -59,7 +59,7 @@ export function Home({ completed, progressPercent, onStart, onSelectLesson, onOp
                 <strong>{lesson.title}</strong>
                 <p>{lesson.description}</p>
               </div>
-            </button>
+            </a>
           ))}
         </div>
       </div>
@@ -71,9 +71,9 @@ export function Home({ completed, progressPercent, onStart, onSelectLesson, onOp
             <h2>理解度チェック</h2>
             <p>レッスンの内容をクイズで確認できます。</p>
           </div>
-          <button type="button" className="btn-secondary" onClick={onOpenQuiz}>
+          <a href={sitePath(`${basePath}/quiz`)} className="btn-secondary">
             クイズに挑戦 →
-          </button>
+          </a>
         </div>
       </div>
     </div>

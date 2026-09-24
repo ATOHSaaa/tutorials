@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { SiteLink } from '../components/SiteLink'
 import { coreTutorials, frameworkTutorials, practiceTutorials, tutorials } from '../data/tutorials'
 import { quizByCourseId } from '../data/quizRegistry'
 import { getQuizResult } from '../lib/quizStats'
@@ -15,7 +15,7 @@ function QuizCardList({ list }: { list: TutorialMeta[] }) {
         const questionCount = quiz.questions.length
 
         return (
-          <Link key={t.id} to={`/quizzes/${t.id}`} className="quiz-hub-card">
+          <SiteLink key={t.id} href={`/quizzes/${t.id}`} className="quiz-hub-card">
             <div className="quiz-hub-card-icon" style={{ background: t.gradient }}>
               {t.icon}
             </div>
@@ -35,7 +35,7 @@ function QuizCardList({ list }: { list: TutorialMeta[] }) {
               )}
             </div>
             <span className="quiz-hub-card-arrow">→</span>
-          </Link>
+          </SiteLink>
         )
       })}
     </div>
@@ -56,7 +56,7 @@ export function QuizHub() {
   return (
     <div className="quiz-hub">
       <header className="quiz-hub-hero">
-        <Link to="/" className="quiz-hub-back">← チュートリアル一覧</Link>
+        <SiteLink href="/" className="quiz-hub-back">← チュートリアル一覧</SiteLink>
         <div className="quiz-hub-badge">📝 理解度チェック</div>
         <h1>クイズ一覧</h1>
         <p className="quiz-hub-sub">

@@ -1,14 +1,15 @@
-import { Navigate, useNavigate, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { QuizPage } from '../components/quiz/QuizPage'
 import { quizByCourseId } from '../data/quizRegistry'
+import { sitePath } from '../lib/paths'
 
 export function CourseQuiz() {
   const { courseId } = useParams()
-  const navigate = useNavigate()
   const course = courseId ? quizByCourseId[courseId] : undefined
 
   if (!course) {
-    return <Navigate to="/quizzes" replace />
+    window.location.replace(sitePath('/quizzes'))
+    return null
   }
 
   return (
@@ -17,7 +18,7 @@ export function CourseQuiz() {
         courseTitle={course.title}
         storageKey={course.storageKey}
         questions={course.questions}
-        onBack={() => navigate('/quizzes')}
+        onBack={() => { window.location.href = sitePath('/quizzes') }}
         backLabel="← クイズ一覧"
       />
     </div>

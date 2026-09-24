@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { SiteLink } from '../components/SiteLink'
 import { tutorials } from '../data/tutorials'
 import { getAllCourseProgress } from '../lib/globalStats'
 import { useGlobalLevel } from '../hooks/useGlobalLevel'
@@ -16,7 +16,7 @@ export function MyPage() {
     <div className="mypage">
       <div className="mypage-inner">
         <nav className="mypage-breadcrumb">
-          <Link to="/">← コース一覧</Link>
+          <SiteLink href="/">← コース一覧</SiteLink>
         </nav>
 
         <header className="mypage-hero">
@@ -65,7 +65,7 @@ export function MyPage() {
             <h2>学習中のコース</h2>
             <div className="mypage-courses">
               {inProgress.map((c) => (
-                <Link key={c.id} to={c.path} className="mypage-course-card">
+                <SiteLink key={c.id} href={c.path} className="mypage-course-card">
                   <div className="mypage-course-icon" style={{ background: c.gradient }}>{c.icon}</div>
                   <div className="mypage-course-body">
                     <strong>{c.title}</strong>
@@ -74,7 +74,7 @@ export function MyPage() {
                     </div>
                     <span className="mypage-course-progress">{c.completed}/{c.total} レッスン（{c.percent}%）</span>
                   </div>
-                </Link>
+                </SiteLink>
               ))}
             </div>
           </section>
@@ -85,11 +85,11 @@ export function MyPage() {
             <h2>完了したコース</h2>
             <div className="mypage-courses mypage-courses-compact">
               {completed.map((c) => (
-                <Link key={c.id} to={c.path} className="mypage-course-chip">
+                <SiteLink key={c.id} href={c.path} className="mypage-course-chip">
                   <span className="mypage-course-chip-icon" style={{ background: c.gradient }}>{c.icon}</span>
                   {c.title}
                   <span className="mypage-course-chip-check">✓</span>
-                </Link>
+                </SiteLink>
               ))}
             </div>
           </section>
@@ -100,10 +100,10 @@ export function MyPage() {
             <h2>未着手のコース</h2>
             <div className="mypage-courses mypage-courses-compact">
               {notStarted.slice(0, 8).map((c) => (
-                <Link key={c.id} to={c.path} className="mypage-course-chip muted">
+                <SiteLink key={c.id} href={c.path} className="mypage-course-chip muted">
                   <span className="mypage-course-chip-icon" style={{ background: c.gradient }}>{c.icon}</span>
                   {c.title}
-                </Link>
+                </SiteLink>
               ))}
               {notStarted.length > 8 && (
                 <span className="mypage-more">他 {notStarted.length - 8} コース</span>
@@ -115,7 +115,7 @@ export function MyPage() {
         {stats.uniqueLessonsCompleted === 0 && (
           <section className="mypage-empty">
             <p>まだレッスンを完了していません。</p>
-            <Link to="/" className="mypage-cta">コースを選んで学習を始める →</Link>
+            <SiteLink href="/" className="mypage-cta">コースを選んで学習を始める →</SiteLink>
           </section>
         )}
       </div>
