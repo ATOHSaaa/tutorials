@@ -1,4 +1,5 @@
 import { lessons } from '../data/lessons'
+import { LessonParagraph, renderLessonText } from '../../components/LessonRichText'
 import { CodeBlock } from './CodeBlock'
 import { LessonDemo } from './demos/LessonDemos'
 
@@ -46,13 +47,13 @@ export function LessonView({
           <section key={i} className="content-section">
             <h2>{section.heading}</h2>
             {section.content.split('\n\n').map((paragraph, j) => (
-              <p key={j}>{paragraph}</p>
+              <LessonParagraph key={j} text={paragraph} />
             ))}
             {section.code && <CodeBlock code={section.code} />}
             {section.tip && (
               <div className="tip-box">
                 <span className="tip-icon">💡</span>
-                {section.tip}
+                {renderLessonText(section.tip)}
               </div>
             )}
           </section>
