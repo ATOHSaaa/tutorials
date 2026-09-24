@@ -24,6 +24,47 @@ export const lessons: Lesson[] = [
           'React は Facebook（現 Meta）が開発した JavaScript ライブラリです。ユーザーインターフェース（UI）を「コンポーネント」という小さな部品に分割して構築します。Web サイト、モバイルアプリ、デスクトップアプリなど、幅広い場面で使われています。',
       },
       {
+        heading: '生の HTML + JavaScript で書く場合',
+        content:
+          'React を使う前に、まず「普通の Web ページ」で同じ機能をどう書くか見てみましょう。たとえば「ボタンを押すとカウントが増える」シンプルな UI です。\n\nHTML でボタンと表示用の要素を用意し、JavaScript で DOM を取得して、クリックのたびに **状態（count）を更新し、表示も自分で書き換える** 必要があります。状態と画面の2つを常に手動で同期させるのが、生の JS のやり方です。',
+        code: `<!-- index.html -->
+<button id="btn">+1</button>
+<p id="count">0 回</p>
+
+<script>
+  let count = 0;
+  const btn = document.getElementById('btn');
+  const countEl = document.getElementById('count');
+
+  btn.addEventListener('click', () => {
+    count += 1;
+    // 状態が変わったら、表示も自分で更新する
+    countEl.textContent = count + ' 回';
+  });
+</script>`,
+        tip: 'DOM 操作の詳細は「DOM 操作 入門」コースで学べます。ここでは React との違いを掴むことが目的です。',
+      },
+      {
+        heading: 'React で書く場合',
+        content:
+          '同じ「カウント表示」を React で書くと、**見た目（JSX）** と **状態** をセットで書きます。ボタンが押されたら状態だけ更新し、表示の書き換えは React に任せます。\n\n`useState` の詳しい使い方はレッスン5で学びますが、今は「状態が変われば React が `<p>` の中身を自動で直してくれる」というイメージを持ってください。',
+        code: `function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <>
+      <button onClick={() => setCount(count + 1)}>+1</button>
+      <p>{count} 回</p>
+    </>
+  );
+}`,
+      },
+      {
+        heading: '2つの書き方の違い',
+        content:
+          '同じ機能でも、書き方の「重心」が大きく異なります。\n\n• **生の HTML + JS** — `getElementById` で要素を探し、`textContent` などで **1つずつ DOM を更新** する（命令的）\n• **React** — 「count が 0 なら `0 回` と表示する」と **結果だけを書く**（宣言的）。DOM の更新は React が行う\n\n画面が複雑になるほど、生の JS では「どの要素をいつ更新するか」の管理が大変になります。React は状態と UI の対応を1か所に書けるので、部品化・再利用と相性が良いのです。',
+      },
+      {
         heading: 'コンポーネント思考',
         content:
           'React では画面を「コンポーネント」の組み合わせで作ります。ボタン、カード、ナビゲーションバーなど、再利用可能な部品を組み合わせて複雑な UI を構築します。レゴブロックのように、同じ部品を何度でも使えます。',
