@@ -99,3 +99,13 @@ select {
   margin-bottom: 1.5rem;
   flex-wrap: wrap;
 }
+
+.content-section strong {
+  color: var(--text-heading);
+  font-weight: 600;
+}
+
+.tip-box strong {
+  color: inherit;
+  font-weight: 600;
+}
