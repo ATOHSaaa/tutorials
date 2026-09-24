@@ -105,6 +105,17 @@ select {
   font-weight: 600;
 }
 
+.content-section .lesson-inline-code,
+.tip-box .lesson-inline-code {
+  font-family: var(--mono);
+  font-size: 0.875em;
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+  color: var(--text-heading);
+}
+
 .content-section .lesson-list {
   margin: 0 0 1rem 1.25rem;
   padding-left: 1.1rem;
