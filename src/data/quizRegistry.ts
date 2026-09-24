@@ -48,6 +48,7 @@ import { quizQuestions as i18nQuiz } from '../i18n/data/quiz'
 import { quizQuestions as cicdQuiz } from '../cicd/data/quiz'
 import { quizQuestions as turboQuiz } from '../turbo/data/quiz'
 import { quizQuestions as uptimeQuiz } from '../uptime/data/quiz'
+import { quizQuestions as honoPostAppQuiz } from '../hono-post-app/data/quiz'
 
 export interface QuizCourse {
   id: string
@@ -550,6 +551,16 @@ export const quizCourses: QuizCourse[] = [
     section: 'practice',
     storageKey: 'uptime-tutorial-quiz',
     questions: uptimeQuiz,
+  },
+  {
+    id: 'hono-post-app',
+    title: 'Hono 投稿サイト',
+    subtitle: '一から作る SNS',
+    icon: '💬',
+    gradient: 'linear-gradient(135deg, #e11d48, #f97316)',
+    section: 'practice',
+    storageKey: 'hono-post-app-tutorial-quiz',
+    questions: honoPostAppQuiz,
   },
 ]
 

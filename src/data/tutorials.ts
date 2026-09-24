@@ -64,6 +64,7 @@ export const tutorials: TutorialMeta[] = [
   { id: 'cicd', path: '/cicd', title: 'CI/CD 入門', subtitle: '自動で届ける', description: 'GitHub Actions でテスト・ビルド・デプロイを自動化する CI/CD を10レッスンで学びます。', icon: '⚙', lessons: 10, storageKey: 'cicd-tutorial-progress', gradient: 'linear-gradient(135deg, #3b82f6, #22c55e)', section: 'practice' },
   { id: 'turbo', path: '/turbo', title: 'Turborepo', subtitle: 'モノレポを速く', description: 'Turborepo で複数パッケージをまとめて管理し、ビルドとテストを高速化する方法を10レッスンで学びます。', icon: '⊞', lessons: 10, storageKey: 'turbo-tutorial-progress', gradient: 'linear-gradient(135deg, #ef4444, #f97316)', section: 'practice' },
   { id: 'uptime', path: '/uptime', title: '死活監視 入門', subtitle: 'サービスを見守る', description: 'ヘルスチェック、アラート、ステータスページなど死活監視の基本を10レッスンで学びます。', icon: '◉', lessons: 10, storageKey: 'uptime-tutorial-progress', gradient: 'linear-gradient(135deg, #ef4444, #f97316)', section: 'practice' },
+  { id: 'hono-post-app', path: '/hono-post-app', title: 'Hono 投稿サイト', subtitle: '一から作る SNS', description: 'React + Hono + D1 で投稿サイトを一から構築。GitHub 管理、CI/CD、Cloudflare デプロイ、CRUD・いいね・フォロー・ログインまで13レッスンで学びます。', icon: '💬', lessons: 13, storageKey: 'hono-post-app-tutorial-progress', gradient: 'linear-gradient(135deg, #e11d48, #f97316)', section: 'practice' },
 ]
 
 export const totalLessons = tutorials.reduce((sum, t) => sum + t.lessons, 0)
