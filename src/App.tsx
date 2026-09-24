@@ -54,6 +54,7 @@ import NpmTutorial from './npm/App'
 import NodeTutorial from './node/App'
 import HttpTutorial from './http/App'
 import HonoPostAppTutorial from './hono-post-app/App'
+import HonoNovelAppTutorial from './hono-novel-app/App'
 
 export default function App() {
   return (
@@ -163,6 +164,8 @@ export default function App() {
         <Route path="/shadcn/:lessonId" element={<ShadcnTutorial />} />
         <Route path="/hono-post-app" element={<HonoPostAppTutorial />} />
         <Route path="/hono-post-app/:lessonId" element={<HonoPostAppTutorial />} />
+        <Route path="/hono-novel-app" element={<HonoNovelAppTutorial />} />
+        <Route path="/hono-novel-app/:lessonId" element={<HonoNovelAppTutorial />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>

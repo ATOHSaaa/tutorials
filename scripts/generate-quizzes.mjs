@@ -55,6 +55,7 @@ const COURSE_TITLES = {
   node: 'Node.js',
   http: 'HTTP',
   'hono-post-app': 'Hono 投稿サイト',
+  'hono-novel-app': 'Hono 小説投稿サイト',
 }
 
 const BOILERPLATE_PATTERNS = [

@@ -49,6 +49,7 @@ import { quizQuestions as cicdQuiz } from '../cicd/data/quiz'
 import { quizQuestions as turboQuiz } from '../turbo/data/quiz'
 import { quizQuestions as uptimeQuiz } from '../uptime/data/quiz'
 import { quizQuestions as honoPostAppQuiz } from '../hono-post-app/data/quiz'
+import { quizQuestions as honoNovelAppQuiz } from '../hono-novel-app/data/quiz'
 
 export interface QuizCourse {
   id: string
@@ -561,6 +562,16 @@ export const quizCourses: QuizCourse[] = [
     section: 'practice',
     storageKey: 'hono-post-app-tutorial-quiz',
     questions: honoPostAppQuiz,
+  },
+  {
+    id: 'hono-novel-app',
+    title: 'Hono 小説投稿サイト',
+    subtitle: '一から作る小説サイト',
+    icon: '📖',
+    gradient: 'linear-gradient(135deg, #7c3aed, #a855f7)',
+    section: 'practice',
+    storageKey: 'hono-novel-app-tutorial-quiz',
+    questions: honoNovelAppQuiz,
   },
 ]
 
