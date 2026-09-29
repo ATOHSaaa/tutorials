@@ -27,7 +27,6 @@ export const lessons: Lesson[] = [
         heading: 'PWA の3本柱',
         content:
           '• Web App Manifest — アプリ名、アイコン、表示モードの定義\n• Service Worker — オフラインキャッシュ、バックグラウンド処理\n• HTTPS — セキュリティ要件（localhost は例外）',
-        tip: 'デモで PWA の構成要素を確認してください。',
       },
       {
         heading: 'なぜ PWA か？',
@@ -70,7 +69,6 @@ export const lessons: Lesson[] = [
         heading: 'HTML へのリンク',
         content:
           '<link rel="manifest" href="/manifest.json" /> を head に追加。theme-color の meta タグも設定します。',
-        tip: 'デモで manifest の各フィールドを確認してください。',
       },
       {
         heading: 'display モード',
@@ -100,7 +98,6 @@ export const lessons: Lesson[] = [
       .catch(err => console.error('SW failed', err));
   });
 }`,
-        tip: 'デモで Service Worker のライフサイクルを確認してください。',
       },
       {
         heading: 'ライフサイクル',
@@ -129,7 +126,6 @@ export const lessons: Lesson[] = [
         heading: 'キャッシュ戦略の種類',
         content:
           '• Cache First — キャッシュ優先（静的アセット向け）\n• Network First — ネットワーク優先（API 向け）\n• Stale While Revalidate — キャッシュを返しつつバックグラウンドで更新',
-        tip: 'デモでキャッシュ戦略の違いを確認してください。',
       },
       {
         heading: 'バージョン管理',
@@ -155,7 +151,6 @@ export const lessons: Lesson[] = [
         heading: 'App Shell モデル',
         content:
           'アプリの骨格（HTML/CSS/JS）をキャッシュし、コンテンツだけネットワークから取得。オフラインでもアプリの枠組みは表示できます。',
-        tip: 'デモでオフライン時の表示を確認してください。',
       },
       {
         heading: 'フォールバックページ',
@@ -185,7 +180,6 @@ window.addEventListener('beforeinstallprompt', (e) => {
         heading: 'インストール条件',
         content:
           'HTTPS、manifest.json、Service Worker、適切なアイコン——Lighthouse の PWA チェックで要件を確認できます。',
-        tip: 'デモでインストールフローを確認してください。',
       },
       {
         heading: 'iOS の注意点',
@@ -218,7 +212,6 @@ registerRoute(
         heading: 'vite-plugin-pwa',
         content:
           'Vite プロジェクトでは vite-plugin-pwa を入れるだけで manifest 生成と SW 登録が自動化されます。',
-        tip: 'デモで Workbox のプリキャッシュを確認してください。',
       },
       {
         heading: 'generateSW vs injectManifest',
@@ -248,7 +241,6 @@ if (permission === 'granted') {
     applicationServerKey: vapidPublicKey,
   });
 }`,
-        tip: 'デモで通知許可のフローを確認してください。',
       },
       {
         heading: '実装の複雑さ',
@@ -271,7 +263,6 @@ if (permission === 'granted') {
         heading: 'よくある不合格項目',
         content:
           '• manifest の icons が不足\n• Service Worker が未登録\n• start_url が 200 を返さない\n• viewport meta タグがない',
-        tip: 'デモで Lighthouse のチェック項目を確認してください。',
       },
       {
         heading: '継続的な監視',

@@ -21,7 +21,6 @@ export const lessons: Lesson[] = [
       {
         heading: "HTTP の位置づけ",
         content: "HTTP（HyperText Transfer Protocol）は、ブラウザとサーバーがデータをやり取りするための「約束事」です。URL を開く、フォームを送信する、API を呼ぶ——これらはすべて HTTP リクエストとレスポンスの往復で成り立っています。\n\nHTTP はステートレス（状態を持たない）プロトコルです。サーバーは前のリクエストを覚えていません。ログイン状態やカートの中身は、Cookie やセッション、トークンなど別の仕組みで管理します。",
-        tip: "デモでブラウザがサーバーへリクエストを送る流れを追ってみてください。"
       },
       {
         heading: "リクエストとレスポンス",
@@ -66,7 +65,6 @@ export const lessons: Lesson[] = [
       {
         heading: "GET と POST の違い",
         content: "GET はデータ取得専用で、パラメータはクエリ文字列に載せます。ブラウザの戻るボタンやブックマーク、CDN キャッシュの対象になりやすいのが特徴です。\n\nPOST はサーバー側の状態を変える操作に使います。フォーム送信、ユーザー登録、決済処理など。同じ POST を繰り返すと二重登録になる可能性があるため、冪等性（何度実行しても同じ結果）には注意が必要です。",
-        tip: "フォームの method 属性が GET と POST で挙動が変わることをデモで確認してみてください。"
       },
       {
         heading: "PUT / PATCH / DELETE",
@@ -92,7 +90,6 @@ export const lessons: Lesson[] = [
       {
         heading: "エラーハンドリングの設計",
         content: "API は意味のあるステータスコードとエラーメッセージを返すべきです。すべて 200 で `{ success: false }` を返す設計は、HTTP の恩恵（キャッシュ、ミドルウェアの自動処理）を活かせません。\n\n422 Unprocessable Entity はバリデーションエラー向きです。`{ errors: { email: [\"形式が不正です\"] } }` のような構造で、フォームの各フィールドにエラーを表示できます。",
-        tip: "デモで意図的に 404 や 500 を返す API を叩き、ブラウザの挙動を確認してみてください。"
       }
     ]
   },
@@ -133,7 +130,6 @@ export const lessons: Lesson[] = [
       {
         heading: "ページネーションとフィルタ",
         content: "一覧 API にはページネーションが必須です。`?page=2&limit=20` や cursor ベース（`?cursor=abc123`）が一般的です。レスポンスには `total` や `nextCursor` を含めます。\n\nフィルタはクエリパラメータで表現します。`?status=published&tag=react&sort=-createdAt`。複雑な検索は POST `/api/articles/search` にボディで条件を送るパターンもあります。",
-        tip: "デモで REST API の URL 設計をシミュレートし、直感的かどうか検証してみてください。"
       }
     ]
   },
@@ -176,7 +172,6 @@ export const lessons: Lesson[] = [
       {
         heading: "開発時の対処",
         content: "ローカル開発では Vite の proxy 設定で `/api` をバックエンドに転送する方法が安全です。ブラウザからは同一オリジンに見えるため CORS が発生しません。\n\n本番では API サーバーが正しい `Access-Control-Allow-Origin` を返す必要があります。`*` は credentials 付きリクエストでは使えません。",
-        tip: "デモでプリフライトの OPTIONS リクエストが Network タブに表示されることを確認してみてください。"
       }
     ]
   },

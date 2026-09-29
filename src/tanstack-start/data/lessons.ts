@@ -27,7 +27,6 @@ export const lessons: Lesson[] = [
         heading: 'TanStack Router との関係',
         content:
           'TanStack Start のルーティングは 100% TanStack Router です。ルートツリー、URL パラメータ、検索パラメータ、Loader、Link — これらはすべて Router の機能です。\n\nStart が追加するのは「サーバーレイヤー」と「ビルドレイヤー」。つまり Router だけではできない SSR、Server Functions、デプロイ設定を担います。',
-        tip: 'デモで Next.js と TanStack Start の違いを確認してみてください。',
       },
       {
         heading: '向いているプロジェクト',
@@ -98,7 +97,6 @@ function AboutPage() {
 ├── posts/
 │   ├── index.tsx       →  /posts
 │   └── $postId.tsx     →  /posts/123`,
-        tip: 'デモでルートと URL の対応を確認してください。',
       },
       {
         heading: 'Link とナビゲーション',
@@ -152,7 +150,6 @@ function PostsPage() {
   loader: async () => fetchDashboardData(),
   component: Dashboard,
 })`,
-        tip: 'デモで Loader のデータ取得フローを体験してください。',
       },
     ],
   },
@@ -182,7 +179,6 @@ export const Route = createFileRoute('/posts')({
   loader: () => fetchPosts(),
   component: PostsPage,
 })`,
-        tip: 'デモで3つの SSR モードの違いを比較してください。',
       },
       {
         heading: 'ストリーミング SSR',
@@ -221,7 +217,6 @@ const user = await getUser({ data: userId })`,
     const post = await db.post.create({ data })
     return post
   })`,
-        tip: 'デモで Server Function の呼び出しフローを確認してください。',
       },
     ],
   },
@@ -247,7 +242,6 @@ export const Route = createAPIFileRoute('/api/webhook')({
         heading: 'Server Functions vs Server Routes',
         content:
           'Server Functions：アプリ内のコンポーネントから呼ぶ、型安全、RPC スタイル\nServer Routes：外部サービスから呼ぶ、REST/Webhook、標準 HTTP\n\n用途に応じて使い分けます。アプリ内のデータ操作は Server Functions、外部連携は Server Routes が基本です。',
-        tip: 'デモで API のリクエストフローを確認してください。',
       },
     ],
   },

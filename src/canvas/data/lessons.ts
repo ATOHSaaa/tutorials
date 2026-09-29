@@ -21,7 +21,6 @@ export const lessons: Lesson[] = [
       {
         heading: "Canvas とは",
         content: "Canvas（キャンバス）は、HTML の `<canvas>` 要素と JavaScript でピクセルを描画する 2D グラフィックス API です。ゲーム、データビジュアライゼーション、画像加工、パーティクル演出など、ピクセル単位の制御が必要な場面で使われます。\n\nCSS や DOM とは違い、Canvas に描いた内容は「ただの画像」として扱われます。ボタンやテキストとしてアクセシブルではないため、UI 部品ではなく「描画領域」として使うのが基本です。",
-        tip: "デモで Canvas に図形を描いてみてください。"
       },
       {
         heading: "SVG との違い",
@@ -176,7 +175,6 @@ export const lessons: Lesson[] = [
       {
         heading: "実用例",
         content: "車のタイヤの回転、時計の針、ゲームキャラの向き変更など、回転の中心を `translate` で移動してから `rotate` するパターンが頻出します。",
-        tip: "デモで図形を回転させてみてください。"
       }
     ]
   },

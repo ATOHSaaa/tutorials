@@ -27,7 +27,6 @@ export const lessons: Lesson[] = [
         heading: 'パフォーマンスの3つの側面',
         content:
           '• 読み込み速度 — 最初の表示が早いか\n• 応答性 — 操作にすぐ反応するか\n• 視覚的安定性 — レイアウトがずれないか\n\nこれらは Core Web Vitals で計測されます。',
-        tip: 'デモでパフォーマンスがビジネスに与える影響を確認してください。',
       },
       {
         heading: '計測から始める',
@@ -50,7 +49,6 @@ export const lessons: Lesson[] = [
         heading: 'LCP の改善',
         content:
           'サーバー応答の高速化、レンダリングブロックの削減、画像の最適化、CDN の活用が効果的です。LCP 要素は DevTools で特定できます。',
-        tip: 'デモで各指標の良好/要改善ラインを確認してください。',
       },
       {
         heading: 'INP と CLS',
@@ -77,7 +75,6 @@ export const lessons: Lesson[] = [
   <source srcset="photo.webp" type="image/webp" />
   <img src="photo.jpg" alt="写真" loading="lazy" width="800" height="600" />
 </picture>`,
-        tip: 'デモで JPEG と WebP のサイズ差を確認してください。',
       },
       {
         heading: '適切なサイズ',
@@ -106,7 +103,6 @@ export const lessons: Lesson[] = [
 const Chart = dynamic(() => import('./Chart'), {
   loading: () => <Spinner />,
 });`,
-        tip: 'デモで遅延読み込みのタイミングを確認してください。',
       },
       {
         heading: 'ルートベースの分割',
@@ -134,7 +130,6 @@ import _ from 'lodash';
 
 // 良い
 import debounce from 'lodash/debounce';`,
-        tip: 'デモでバンドルサイズの比較を確認してください。',
       },
       {
         heading: '依存関係の見直し',
@@ -162,7 +157,6 @@ Cache-Control: no-cache`,
         heading: 'CDN',
         content:
           'コンテンツ配信ネットワークでユーザーに近いサーバーから配信。Cloudflare、Vercel、AWS CloudFront など。画像・JS/CSS の配信で効果大。',
-        tip: 'デモでキャッシュヒット時の速度差を確認してください。',
       },
       {
         heading: 'Service Worker キャッシュ',
@@ -190,7 +184,6 @@ Cache-Control: no-cache`,
         heading: 'woff2 とサブセット',
         content:
           'woff2 が最も圧縮率が高い。日本語フォントはサブセット化（必要な文字だけ）で大幅に軽量化できます。',
-        tip: 'デモで font-display の違いを確認してください。',
       },
       {
         heading: 'システムフォント',
@@ -216,7 +209,6 @@ Cache-Control: no-cache`,
         code: `const MemoizedList = memo(function List({ items }) {
   return items.map(i => <Item key={i.id} {...i} />);
 });`,
-        tip: 'デモでレイアウトシフトの例を確認してください。',
       },
       {
         heading: 'アニメーションの最適化',
@@ -244,7 +236,6 @@ onCLS(metric => sendToAnalytics(metric));`,
         heading: 'Lighthouse CI',
         content:
           'PR ごとに Lighthouse スコアを計測し、パフォーマンスの劣化を防ぎます。CI/CD チュートリアルと組み合わせて使えます。',
-        tip: 'デモで監視の概念を確認してください。',
       },
       {
         heading: '改善サイクル',

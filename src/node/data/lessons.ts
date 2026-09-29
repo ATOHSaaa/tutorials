@@ -25,7 +25,6 @@ export const lessons: Lesson[] = [
       {
         heading: "イベント駆動とノンブロッキング I/O",
         content: "Node.js の核心はイベントループです。ファイル読み込みや DB クエリの待ち時間に CPU を止めず、他の処理を進めます。1スレッドで多数の接続を扱えるため、I/O 中心の Web API に向いています。\n\nCPU を大量に使う画像処理や動画エンコードは、Worker Threads や別サービスに任せるのが一般的です。",
-        tip: "デモで同期処理と非同期処理の実行順序の違いを確認してみてください。"
       },
       {
         heading: "Node.js の用途",
@@ -93,7 +92,6 @@ export const lessons: Lesson[] = [
       {
         heading: "パスの扱い",
         content: "path モジュールで OS 差異を吸収します。`path.join(\"dir\", \"file.txt\")` は `/` と `\\` を正しく結合し、`path.resolve` は絶対パスを返します。\n\nユーザー入力のファイル名をそのまま使うとパストラバーサル攻撃の危険があります。`path.basename` でファイル名だけ取り出し、許可リストで検証しましょう。",
-        tip: "デモで相対パスと絶対パスの違いを確認してみてください。"
       }
     ]
   },
@@ -157,7 +155,6 @@ export const lessons: Lesson[] = [
       {
         heading: "イベントループの注意点",
         content: "同期的な重い処理（大きな JSON の parse、暗号化ループ）はイベントループをブロックし、他のリクエストを止めます。\n\nCPU バウンドな処理は Worker Threads やキュー（BullMQ など）に逃がす設計を検討してください。",
-        tip: "デモで await の前後で console.log の出力順序を確認してみてください。"
       }
     ]
   },

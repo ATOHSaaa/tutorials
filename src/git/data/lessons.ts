@@ -27,7 +27,6 @@ export const lessons: Lesson[] = [
         heading: 'なぜ Git が必要か？',
         content:
           '• 変更の取り消し — 壊したコードを前の状態に戻せる\n• 共同開発 — 複数人が同時に作業しても履歴が残る\n• ブランチ — 機能ごとに独立した作業線を作れる\n• デプロイの信頼性 — CI/CD と組み合わせて安全にリリースできる',
-        tip: 'デモでコミット履歴の流れを確認してみてください。',
       },
       {
         heading: 'Git と GitHub の違い',
@@ -60,7 +59,6 @@ git config --global user.email "you@example.com"
 
 # 設定確認
 git config --list`,
-        tip: 'デモで設定コマンドの流れを確認してください。',
       },
       {
         heading: 'リポジトリの作成',
@@ -98,7 +96,6 @@ git add .              # すべて追加
 
 # コミット
 git commit -m "ヘッダーを追加"`,
-        tip: 'デモで add → commit の流れを体験してください。',
       },
       {
         heading: '良いコミットメッセージ',
@@ -128,7 +125,6 @@ git log --graph --oneline  # ブランチの分岐も表示`,
         code: `git diff              # 未ステージの変更
 git diff --staged     # ステージ済みの変更
 git diff HEAD~1       # 直前のコミットとの差分`,
-        tip: 'デモでコミット履歴の確認を試してみてください。',
       },
       {
         heading: '特定のコミットを調べる',
@@ -155,7 +151,6 @@ git diff HEAD~1       # 直前のコミットとの差分`,
 git branch feature/login      # 作成
 git checkout feature/login    # 切り替え
 git switch -c feature/login   # 作成+切り替え（新しい書き方）`,
-        tip: 'デモでブランチの分岐を確認してください。',
       },
       {
         heading: '命名のベストプラクティス',
@@ -180,7 +175,6 @@ git merge feature/login`,
         heading: 'Fast-forward と 3-way merge',
         content:
           'main に新しいコミットがなければ Fast-forward（単純に先に進む）。両方に変更がある場合はマージコミットが作られます。',
-        tip: 'デモで2つのブランチが統合される流れを見てください。',
       },
       {
         heading: 'マージ後のブランチ削除',
@@ -208,7 +202,6 @@ git pull origin main`,
           '新しいリポジトリを GitHub に作った後、初回は -u で upstream を設定します。',
         code: `git remote add origin https://github.com/user/repo.git
 git push -u origin main`,
-        tip: 'デモで push / pull の流れを確認してください。',
       },
       {
         heading: 'fetch と pull の違い',
@@ -231,7 +224,6 @@ git push -u origin main`,
         heading: 'PR の流れ',
         content:
           '1. feature ブランチで開発\n2. push して GitHub にブランチを送る\n3. 「Compare & pull request」をクリック\n4. 説明を書いて PR 作成\n5. レビュー → 修正 → 承認 → マージ',
-        tip: 'デモで PR のワークフローを確認してください。',
       },
       {
         heading: '良い PR の書き方',
@@ -259,7 +251,6 @@ const theme = 'light';
         heading: '解消の手順',
         content:
           '1. コンフリクト箇所を開く\n2. <<<<<<< ======= >>>>>>> マーカーを削除し、正しいコードを残す\n3. git add で解消をマーク\n4. git commit でマージ完了',
-        tip: 'デモでコンフリクト解消の流れを体験してください。',
       },
       {
         heading: 'コンフリクトを減らすコツ',

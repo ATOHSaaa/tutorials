@@ -27,7 +27,6 @@ export const lessons: Lesson[] = [
         heading: '従来の CSS との違い',
         content:
           '従来: HTML に class="card" → CSS ファイルに .card { padding: 1rem; ... } を書く\n\nTailwind: HTML に class="p-4 bg-white shadow rounded-lg" と直接書く\n\nファイルを行き来せず、HTML を見ればスタイルがわかるのが利点です。',
-        tip: 'デモでクラスを切り替えて見た目の変化を確認してください。',
       },
       {
         heading: 'いつ Tailwind を使う？',
@@ -55,7 +54,6 @@ npm install tailwindcss @tailwindcss/vite`,
           'Next.js 15 以降は Tailwind がテンプレートに含まれています。新規作成時に選択するだけで使えます。',
         code: `npx create-next-app@latest my-app
 # Tailwind CSS を使いますか？ → Yes`,
-        tip: 'デモでプロジェクト構成を確認してください。',
       },
       {
         heading: '設定ファイル',
@@ -82,7 +80,6 @@ npm install tailwindcss @tailwindcss/vite`,
   <img class="w-12 h-12 rounded-full" />
   <p class="text-lg font-bold text-gray-900">タイトル</p>
 </div>`,
-        tip: 'デモでクラスを組み合わせてカードを作ってみてください。',
       },
       {
         heading: '公式ドキュメント',
@@ -117,7 +114,6 @@ npm install tailwindcss @tailwindcss/vite`,
   <div class="p-4 bg-white rounded">カード2</div>
   <div class="p-4 bg-white rounded">カード3</div>
 </div>`,
-        tip: 'デモで Flex と Grid のレイアウトを比較してください。',
       },
       {
         heading: '使い分け',
@@ -143,7 +139,6 @@ npm install tailwindcss @tailwindcss/vite`,
         code: `<div class="w-full max-w-2xl mx-auto p-8">
   <div class="h-48 bg-blue-100 rounded-lg"></div>
 </div>`,
-        tip: 'デモで padding と margin の違いを確認してください。',
       },
       {
         heading: 'space と gap',
@@ -168,7 +163,6 @@ npm install tailwindcss @tailwindcss/vite`,
         heading: 'カラーパレット',
         content:
           'bg-blue-500、text-red-600、border-gray-200 など。数字が大きいほど濃い（50 が最も薄い、900 が最も濃い）。ブランド色は tailwind.config でカスタム定義できます。',
-        tip: 'デモで色とフォントサイズを変更してみてください。',
       },
       {
         heading: '透明度とグラデーション',
@@ -198,7 +192,6 @@ npm install tailwindcss @tailwindcss/vite`,
         heading: 'モバイルファースト',
         content:
           'Tailwind はモバイルファーストです。プレフィックスなしのクラスがモバイル向け、md: 以降がタブレット・PC向けになります。',
-        tip: 'デモで画面サイズを変えたときのクラス適用を確認してください。',
       },
       {
         heading: '非表示・表示の切り替え',
@@ -226,7 +219,6 @@ npm install tailwindcss @tailwindcss/vite`,
         heading: 'disabled と group',
         content:
           'disabled:opacity-50 で無効化スタイル。group と group-hover: で親の hover に子が反応するパターンも便利です。',
-        tip: 'デモで hover / focus の見た目を試してください。',
       },
       {
         heading: 'transition',
@@ -253,7 +245,6 @@ npm install tailwindcss @tailwindcss/vite`,
         heading: 'class 方式 vs media 方式',
         content:
           'media は OS の設定に追従。class は html に dark クラスを付けて手動切り替え（トグルボタン）が可能。アプリでは class 方式が一般的です。',
-        tip: 'デモでダークモードの切り替えを体験してください。',
       },
       {
         heading: 'カラーの設計',

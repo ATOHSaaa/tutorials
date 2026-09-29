@@ -25,7 +25,6 @@ export const lessons: Lesson[] = [
       {
         heading: "主要機能",
         content: "• Database — PostgreSQL（SQL、リレーション、全文検索）\n• Auth — メール、OAuth、Magic Link\n• Storage — ファイルアップロード（S3 互換）\n• Realtime — DB 変更の WebSocket 配信\n• Edge Functions — Deno ベースのサーバーレス関数",
-        tip: "デモで Supabase Dashboard の Table Editor を開き、データを直接操作してみてください。"
       },
       {
         heading: "Firebase との比較",
@@ -92,7 +91,6 @@ export const lessons: Lesson[] = [
       {
         heading: "セッション管理",
         content: "onAuthStateChange でログイン/ログアウトを監視します。getSession() で現在のセッションを取得。signOut() でログアウトします。\n\nReact では Supabase Auth Helpers（@supabase/auth-helpers-nextjs）で SSR 対応のセッション管理が簡単です。",
-        tip: "デモでログイン → セッション取得 → ログアウトのフローを追跡してみてください。"
       }
     ]
   },
@@ -154,7 +152,6 @@ export const lessons: Lesson[] = [
       {
         heading: "Broadcast",
         content: "クライアント間でカスタムメッセージを送受信します。カーソル位置の共有やタイピングインジケーターなど、DB を介さないリアルタイム通信に使います。",
-        tip: "デモで2つのブラウザタブを開き、一方でデータを追加して他方にリアルタイム反映されることを確認してみてください。"
       }
     ]
   },

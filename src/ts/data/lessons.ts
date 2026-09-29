@@ -27,7 +27,6 @@ export const lessons: Lesson[] = [
         heading: 'なぜ TypeScript を使うの？',
         content:
           'JavaScript では、変数に何のデータが入るか決まっていません。だから「文字列を入れるつもりが数値を入れた」「存在しないプロパティにアクセスした」といったミスが、実行するまで気づけないことがあります。\n\nTypeScript は「この変数には文字列が入る」と事前に宣言するので、エディタが間違いをすぐに教えてくれます。コードが増えるほど、この恩恵は大きくなります。',
-        tip: 'デモで「型なし」と「型あり」の違いを確認してみてください。',
       },
       {
         heading: 'JavaScript との関係',
@@ -68,7 +67,6 @@ let flag: boolean = false;
 // 配列の型
 let numbers: number[] = [1, 2, 3];
 let names: string[] = ["太郎", "花子"];`,
-        tip: 'デモで型を変えて、エラーになる例を見てみてください。',
       },
     ],
   },
@@ -105,7 +103,6 @@ const user: User = {
 };
 
 type ID = string | number;  // ユニオン型`,
-        tip: 'デモで User オブジェクトの型チェックを体験してください。',
       },
     ],
   },
@@ -139,7 +136,6 @@ function add(a: number, b: number): number {
 
 // 引数の型だけ書く（戻り値は推論）
 const double = (n: number) => n * 2;`,
-        tip: 'デモで関数の型チェックを試してみてください。',
       },
     ],
   },
@@ -209,7 +205,6 @@ id = 42;  // ✓ どちらも OK`,
 
 const user1: User = { name: "太郎", age: 25 };
 const user2: User = { name: "花子", age: 30, email: "hanako@..." };`,
-        tip: 'デモで Status 型の切り替えを試してみてください。',
       },
     ],
   },
@@ -265,7 +260,6 @@ value = 42;`,
         heading: '推論と明示のバランス',
         content:
           '推論で十分なときは書かない、複雑な型や関数の引数・戻り値は明示する——このバランスが大切です。コードが読みやすく、エディタの補完も効きます。',
-        tip: 'デモで型推論の結果を確認してみてください。',
       },
     ],
   },

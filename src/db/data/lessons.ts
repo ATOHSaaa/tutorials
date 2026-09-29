@@ -27,7 +27,6 @@ export const lessons: Lesson[] = [
         heading: 'なぜ DB が必要なのか？',
         content:
           'Excel や JSON ファイルでもデータは保存できます。しかし、ユーザーが100万人になったら？ 同時に1000人がアクセスしたら？\n\nデータベースは「大量のデータ」「同時アクセス」「高速な検索」「データの整合性」を効率的に処理するために設計されています。',
-        tip: 'デモで「ファイル保存 vs データベース」の違いを確認してみてください。',
       },
       {
         heading: 'フロントエンドとの関係',
@@ -79,7 +78,6 @@ TEXT     — 文字列（name, email, title）
 BOOLEAN  — 真偽値（is_active）
 TIMESTAMP— 日時（created_at）
 DECIMAL  — 小数（rating）`,
-        tip: 'デモでテーブルの構造をクリックして確認してみてください。',
       },
     ],
   },
@@ -139,7 +137,6 @@ user_id (FK) | tag_id (FK)
 1            | 3
 1            | 5
 2            | 3`,
-        tip: 'デモで3種類のリレーションを図で確認してください。',
       },
     ],
   },
@@ -152,7 +149,6 @@ user_id (FK) | tag_id (FK)
         heading: 'トランザクションとは？',
         content:
           'トランザクションは、データベースに対する複数の操作を「1つのまとまり」として扱う仕組みです。すべて成功したときだけ変更を確定し、途中で失敗したらすべて取り消します。\n\nたとえば銀行の送金では「A さんの口座から引く」と「B さんの口座に入れる」の2つの操作が必要です。片方だけ成功して片方が失敗すると、お金が消えたり増えたりしてしまいます。トランザクションは、このような不整合を防ぎます。',
-        tip: 'デモで送金が成功する場合と失敗する場合の違いを確認してみてください。',
       },
       {
         heading: 'COMMIT と ROLLBACK',
@@ -214,7 +210,6 @@ users:  id | name
         heading: 'フルテーブルスキャンとは',
         content:
           'インデックスがない状態で WHERE email = \'taro@example.com\' を実行すると、DB は users テーブルの先頭行から順に email を比較します。これを「フルテーブルスキャン（Full Table Scan）」と呼びます。\n\n100万行あれば、最悪の場合100万回比較が必要です。行数に比例して遅くなるため、ユーザー数が増える Web アプリでは致命的になります。',
-        tip: 'デモでインデックスあり・なしの「スキャン行数」の差を確認してみてください。',
       },
       {
         heading: 'B-tree インデックスの仕組み',
@@ -276,7 +271,6 @@ SELECT * FROM users WHERE age BETWEEN 20 AND 30;
 
 -- ❌ インデックスが効きにくい
 SELECT * FROM users WHERE age + 1 = 30;  -- 列に計算式`,
-        tip: 'デモでクエリごとにインデックスが使われるかを確認してみてください。',
       },
       {
         heading: 'ORDER BY と JOIN',
@@ -337,7 +331,6 @@ CREATE INDEX idx_orders_user_created
 SELECT * FROM orders
 WHERE user_id = 42
 ORDER BY created_at DESC;`,
-        tip: 'デモで複合インデックス (user_id, created_at) がどのクエリに効くか試してみてください。',
       },
       {
         heading: '左端一致の原則',
@@ -401,7 +394,6 @@ model Post {
         heading: '主な種類',
         content:
           'ドキュメント型（MongoDB）— JSON のような形式で保存。スキーマが柔軟\nキーバリュー型（Redis）— キャッシュ、セッション管理に最適\nグラフ型（Neo4j）— SNS の友達関係など、つながりのデータ\n\nWeb 開発の入門では RDBMS から始めるのがおすすめです。NoSQL は用途が決まってから検討します。',
-        tip: 'デモで RDBMS と NoSQL の使い分けを比較してください。',
       },
     ],
   },
@@ -426,7 +418,6 @@ API → JSON → ブラウザ`,
         heading: 'ORM とは',
         content:
           'ORM（Object-Relational Mapping）は、SQL を直接書かずに TypeScript/JavaScript のコードで DB を操作するツールです。\n\nPrisma、Drizzle が React/Next.js でよく使われます。裏側では SQL が実行されていますが、型安全で書きやすくなります。',
-        tip: 'デモでデータの流れをステップごとに追ってみてください。',
       },
     ],
   },

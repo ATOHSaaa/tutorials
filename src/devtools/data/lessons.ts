@@ -27,7 +27,6 @@ export const lessons: Lesson[] = [
         heading: '開き方',
         content:
           '• F12 または Ctrl+Shift+I（Mac: Cmd+Option+I）\n• 右クリック → 「検証」\n• Chrome メニュー → その他のツール → デベロッパーツール',
-        tip: 'デモで DevTools の主要パネルを確認してください。',
       },
       {
         heading: 'なぜ必須スキルか',
@@ -56,7 +55,6 @@ export const lessons: Lesson[] = [
   gap: 1rem;
   border: 2px dashed red; /* レイアウト確認用 */
 }`,
-        tip: 'デモで要素の選択とスタイル編集を試してください。',
       },
       {
         heading: 'Computed と Layout',
@@ -84,7 +82,6 @@ console.timeEnd('fetch');`,
         heading: 'REPL として使う',
         content:
           'Console に JavaScript を直接入力して実行できます。ページ上の変数や DOM にアクセスして動作確認ができます。',
-        tip: 'デモで console の出力例を確認してください。',
       },
       {
         heading: 'エラーの読み方',
@@ -107,7 +104,6 @@ console.timeEnd('fetch');`,
         heading: 'よく使う操作',
         content:
           '• Preserve log — ページ遷移後もログを保持\n• Disable cache — キャッシュ無効で再現\n• Filter: Fetch/XHR — API だけ表示\n• リクエストをクリック → Headers / Preview / Response',
-        tip: 'デモで Network パネルの見方を確認してください。',
       },
       {
         heading: 'デバッグの典型',
@@ -133,7 +129,6 @@ console.timeEnd('fetch');`,
         code: `// この行にブレークポイント
 const result = calculateTotal(items);
 console.log(result); // ここまでステップ実行`,
-        tip: 'デモでブレークポイントの概念を確認してください。',
       },
       {
         heading: '条件付きブレークポイント',
@@ -156,7 +151,6 @@ console.log(result); // ここまでステップ実行`,
         heading: '見るべきポイント',
         content:
           '• 長い黄色いタスク（JavaScript 実行）\n• 紫色のレイアウト/ペイント\n• FPS の低下\n• Main スレッドのボトルネック',
-        tip: 'デモで Performance パネルのタイムラインを確認してください。',
       },
       {
         heading: 'Lighthouse との連携',
@@ -179,7 +173,6 @@ console.log(result); // ここまでステップ実行`,
         heading: 'メディアクエリの確認',
         content:
           'ブレークポイントの境界でレイアウトがどう変わるかを確認。Tailwind の md: lg: が効いているかの検証に使います。',
-        tip: 'デモで画面サイズの切り替えを試してください。',
       },
       {
         heading: 'ネットワークのスロットリング',
@@ -205,7 +198,6 @@ console.log(result); // ここまでステップ実行`,
         code: `// Console で確認
 localStorage.getItem('react-tutorial-progress')
 // → ["intro","jsx",...]`,
-        tip: 'デモで Storage の内容を確認してください。',
       },
       {
         heading: 'Cache Storage',
@@ -228,7 +220,6 @@ localStorage.getItem('react-tutorial-progress')
         heading: '$0 と $_',
         content:
           'Elements で選択中の要素は Console で $0 として参照できます。$_ は直前の Console の実行結果です。',
-        tip: 'デモでショートカット一覧を確認してください。',
       },
       {
         heading: 'console の便利機能',

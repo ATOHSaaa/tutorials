@@ -27,7 +27,6 @@ export const lessons: Lesson[] = [
         heading: 'テストのピラミッド',
         content:
           '• ユニットテスト — 関数・コンポーネント単体（多く・高速）\n• 統合テスト — 複数モジュールの連携\n• E2E テスト — ブラウザでユーザー操作を再現（少なく・遅い）\n\nこのチュートリアルはユニット・コンポーネントテスト中心です。',
-        tip: 'デモでテストの種類を確認してください。',
       },
       {
         heading: 'テスト駆動開発（TDD）',
@@ -59,7 +58,6 @@ export default defineConfig({
     setupFiles: './src/test/setup.ts',
   },
 });`,
-        tip: 'デモで Vitest のプロジェクト構成を確認してください。',
       },
       {
         heading: '実行',
@@ -94,7 +92,6 @@ describe('add', () => {
         heading: 'よく使う matcher',
         content:
           'toBe（厳密等価）、toEqual（オブジェクト比較）、toBeTruthy、toContain、toThrow、toMatchObject など。',
-        tip: 'デモでユニットテストの実行結果を確認してください。',
       },
       {
         heading: 'テストの粒度',
@@ -126,7 +123,6 @@ it('クリックでラベルが変わる', () => {
   fireEvent.click(btn);
   expect(screen.getByText('クリック済み')).toBeInTheDocument();
 });`,
-        tip: 'デモで RTL のクエリ方法を確認してください。',
       },
       {
         heading: 'クエリの優先順位',
@@ -153,7 +149,6 @@ it('クリックでラベルが変わる', () => {
         heading: '条件付きレンダリング',
         content:
           'props や state によって表示が変わるケースをテスト。queryBy* は要素がない場合に null を返すので、非表示の確認に使います。',
-        tip: 'デモで描画テストの例を確認してください。',
       },
       {
         heading: 'スナップショットテスト',
@@ -185,7 +180,6 @@ it('入力して送信', async () => {
         heading: 'フォームのテスト',
         content:
           '入力 → 送信 → 結果表示の流れをテスト。バリデーションエラーの表示も忘れずに。',
-        tip: 'デモでクリック・入力テストを確認してください。',
       },
       {
         heading: 'waitFor',
@@ -217,7 +211,6 @@ it('ユーザー名を表示', async () => {
         heading: 'API のモック',
         content:
           'MSW（Mock Service Worker）でネットワークレイヤーをモックする方法も実務でよく使われます。fetch を直接 vi.spyOn でモックする手軽な方法もあります。',
-        tip: 'デモでモックの概念を確認してください。',
       },
       {
         heading: 'モックの注意点',
@@ -244,7 +237,6 @@ it('ユーザー名を表示', async () => {
         heading: 'findBy vs getBy',
         content:
           'getBy は即座に要素を探す（なければエラー）。findBy は一定時間待ってから探す（非同期レンダリング向け）。',
-        tip: 'デモで非同期テストの流れを確認してください。',
       },
       {
         heading: 'タイムアウト',
@@ -268,7 +260,6 @@ it('ユーザー名を表示', async () => {
         heading: '見るべき指標',
         content:
           'Statements、Branches、Functions、Lines。特に Branches（if/else の両方）がテストされているかが重要です。',
-        tip: 'デモでカバレッジレポートの見方を確認してください。',
       },
       {
         heading: 'CI での活用',

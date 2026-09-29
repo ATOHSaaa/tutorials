@@ -35,7 +35,6 @@ export const lessons: Lesson[] = [
   color: blue;
   font-size: 32px;
 }`,
-        tip: 'デモで「CSS なし」と「CSS あり」を見比べてみてください。',
       },
       {
         heading: 'CSS の書き方',
@@ -75,7 +74,6 @@ a { color: blue; }       /* すべてのリンク`,
 
 /* 複数のクラスを同時に指定 */
 .card.highlight { background: yellow; }`,
-        tip: 'デモでセレクタを切り替えて、どの要素が選ばれるか確認してみてください。',
       },
     ],
   },
@@ -102,7 +100,6 @@ color: rgba(59, 130, 246, 0.5); /* 50% 透明 */`,
   background-image: url('pattern.png');
   background: linear-gradient(135deg, #667eea, #764ba2);
 }`,
-        tip: 'デモのスライダーで色を変えてみてください。',
       },
     ],
   },
@@ -128,7 +125,6 @@ font-weight: 400;     /* 通常 */`,
 text-align: right;    /* 右揃え */
 line-height: 1.6;     /* 行間（1.6倍） */
 text-decoration: underline; /* 下線 */`,
-        tip: 'デモで各プロパティを変えて、テキストの見た目の変化を確認してください。',
       },
     ],
   },
@@ -159,7 +155,6 @@ margin-top: 24px;           /* 上だけ */`,
 border-radius: 8px;  /* 角を丸く */
 width: 300px;
 height: 200px;`,
-        tip: 'デモで padding と margin のスライダーを動かして、箱の変化を見てみてください。',
       },
     ],
   },
@@ -186,7 +181,6 @@ height: 200px;`,
         code: `justify-content: space-between; /* 両端揃え */
 align-items: center;            /* 縦中央 */
 flex-direction: column;         /* 縦並び */`,
-        tip: 'デモで justify-content と align-items を変えて配置の違いを確認してください。',
       },
     ],
   },
@@ -212,7 +206,6 @@ flex-direction: column;         /* 縦並び */`,
         code: `grid-template-columns: repeat(3, 1fr);
 grid-template-columns: 200px 1fr 1fr; /* 1列目固定、残り均等 */
 grid-template-rows: auto 1fr;`,
-        tip: 'デモで列数を変えて、グリッドの変化を確認してください。',
       },
     ],
   },
@@ -241,7 +234,6 @@ input:focus {
         heading: 'よく使う疑似クラス',
         content:
           ':hover — マウスを乗せたとき\n:active — クリックしている瞬間\n:focus — フォーカスされたとき\n:first-child — 最初の子要素\n:last-child — 最後の子要素\n:nth-child(n) — n番目の子要素',
-        tip: 'デモのボタンやリンクにマウスを乗せて、:hover の効果を体験してください。',
       },
     ],
   },
@@ -268,7 +260,6 @@ input:focus {
     flex-direction: column;
   }
 }`,
-        tip: 'デモのスライダーで画面幅を変えて、レイアウトの切り替わりを確認してください。',
       },
     ],
   },

@@ -27,7 +27,6 @@ export const lessons: Lesson[] = [
         heading: 'React との違い',
         content:
           '• テンプレート — Vue は HTML ベースのテンプレート、React は JSX\n• リアクティビティ — Vue は ref/reactive、React は useState\n• 学習曲線 — Vue は HTML に近く初心者に優しいとされる\n• エコシステム — React は Next.js、Vue は Nuxt',
-        tip: 'デモで Vue の基本概念を確認してください。',
       },
       {
         heading: 'いつ Vue を選ぶ？',
@@ -58,7 +57,6 @@ npm run dev`,
         heading: 'プロジェクト構成',
         content:
           'src/App.vue がルートコンポーネント。src/components/ に部品、src/views/ にページ（Vue Router 使用時）を配置します。',
-        tip: 'デモでプロジェクト構成を確認してください。',
       },
       {
         heading: 'Nuxt',
@@ -93,7 +91,6 @@ h1 { color: #42b883; }
         heading: 'マスタッシュ構文',
         content:
           '{{ }} で JavaScript 式を埋め込みます。v-html で HTML を、v-bind（:）で属性を動的に設定します。',
-        tip: 'デモでテンプレートのデータバインディングを確認してください。',
       },
       {
         heading: 'ディレクティブ',
@@ -129,7 +126,6 @@ function increment() {
         heading: 'reactive',
         content:
           'オブジェクト全体をリアクティブにする場合は reactive()。ただし ref が推奨される場面が増えています。',
-        tip: 'デモでカウンターのリアクティビティを確認してください。',
       },
       {
         heading: 'computed と watch',
@@ -167,7 +163,6 @@ const props = defineProps<{
 }>();
 
 emit('update', 42);`,
-        tip: 'デモで親子コンポーネントの通信を確認してください。',
       },
       {
         heading: 'スロット',
@@ -200,7 +195,6 @@ emit('update', 42);`,
 }>(), {
   size: 'md',
 });`,
-        tip: 'デモで Props の受け渡しを確認してください。',
       },
       {
         heading: 'Props の一方向性',
@@ -229,7 +223,6 @@ const total = computed(() =>
         heading: 'methods との使い分け',
         content:
           'computed はキャッシュされる（依存が変わらなければ再計算しない）。methods は呼ぶたびに実行。表示用の派生値は computed、イベントハンドラは methods が基本です。',
-        tip: 'デモで computed の再計算タイミングを確認してください。',
       },
       {
         heading: 'writable computed',
@@ -262,7 +255,6 @@ onUnmounted(() => {
         heading: 'データ取得のタイミング',
         content:
           'API からのデータ取得は onMounted で行うのが一般的。SSR（Nuxt）では useAsyncData や useFetch を使います。',
-        tip: 'デモでライフサイクルの流れを確認してください。',
       },
       {
         heading: 'watchEffect',
@@ -294,7 +286,6 @@ export function useCounter(initial = 0) {
         heading: '使い方',
         content:
           'script setup 内で useCounter() を呼ぶだけ。複数コンポーネントで同じロジックを共有できます。',
-        tip: 'デモで Composable の再利用を確認してください。',
       },
       {
         heading: '命名規則',

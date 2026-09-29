@@ -78,14 +78,22 @@ export function Hub() {
         <TutorialCardList tutorials={practiceTutorials} />
       </section>
 
-      <section className="hub-quiz-banner">
-        <SiteLink href="/quizzes" className="hub-quiz-banner-card">
-          <span className="hub-quiz-banner-icon">📝</span>
+      <section className="hub-feature-banners">
+        <SiteLink href="/quizzes" className="hub-feature-banner-card">
+          <span className="hub-feature-banner-icon">📝</span>
           <div>
             <h2>理解度チェック</h2>
             <p>全{tutorials.length}コースのクイズを一覧から挑戦できます</p>
           </div>
-          <span className="hub-quiz-banner-arrow">→</span>
+          <span className="hub-feature-banner-arrow">→</span>
+        </SiteLink>
+        <SiteLink href="/debug" className="hub-feature-banner-card">
+          <span className="hub-feature-banner-icon">🐛</span>
+          <div>
+            <h2>デバッグ問題集</h2>
+            <p>バグだらけのコードから原因を見つけて修正する実践問題</p>
+          </div>
+          <span className="hub-feature-banner-arrow">→</span>
         </SiteLink>
       </section>
 

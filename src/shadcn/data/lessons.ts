@@ -21,7 +21,6 @@ export const lessons: Lesson[] = [
       {
         heading: "shadcn/ui とは",
         content: "shadcn/ui は「npm パッケージとしてインストールする UI ライブラリ」ではありません。Radix UI（アクセシブルなプリミティブ）と Tailwind CSS を組み合わせたコンポーネントのソースコードを、CLI でプロジェクトにコピーする仕組みです。\n\nつまりコンポーネントの「所有者」はあなたのプロジェクト。自由に改変でき、バージョンアップも自分でコントロールできます。MUI や Chakra UI のようなブラックボックスではなく、コードが手元にあるのが最大の特徴です。",
-        tip: "デモで shadcn/ui 風の Button を確認してみてください。"
       },
       {
         heading: "Radix UI + Tailwind",
@@ -114,7 +113,6 @@ export const lessons: Lesson[] = [
       {
         heading: "バリデーション",
         content: "Zod スキーマで型安全なバリデーションを定義し、エラーメッセージを日本語化できます。フォームチュートリアルで学んだ知識がそのまま活きます。",
-        tip: "デモでフォームのバリデーション状態を確認してみてください。"
       }
     ]
   },
@@ -197,7 +195,6 @@ export const lessons: Lesson[] = [
       {
         heading: "ThemeToggle",
         content: "DropdownMenu と組み合わせてライト/ダーク/システムの切り替えボタンを作るのが定番パターンです。shadcn/ui のドキュメントにサンプルコードが公開されています。",
-        tip: "デモでライト/ダークテーマの切り替えを試してみてください。"
       }
     ]
   },

@@ -27,7 +27,6 @@ export const lessons: Lesson[] = [
         heading: 'なぜ CI/CD が必要か？',
         content:
           '• 手動デプロイのミスを減らす — 「本番に古いビルドを上げた」などの事故を防ぐ\n• 早期にバグを発見 — push した瞬間にテストが走る\n• レビューが楽になる — CI が緑ならマージの判断材料になる\n• デプロイの恐怖が減る — 小さな変更を頻繁に届けられる',
-        tip: 'デモで CI と CD の違いを確認してください。',
       },
       {
         heading: 'このチュートリアルの範囲',
@@ -59,7 +58,6 @@ trigger: push to main
   → job: deploy (test 成功後)
       step: npm run build
       step: deploy to production`,
-        tip: 'デモでパイプラインの各ステップを順番に追ってみてください。',
       },
       {
         heading: '失敗したら止まる',
@@ -202,7 +200,6 @@ jobs:
         heading: 'PR での必須チェック',
         content:
           'GitHub の Branch protection で「CI が成功しないとマージできない」ルールを設定するのが実務の定番です。\n\nSettings → Branches → Branch protection rules → Require status checks to pass',
-        tip: 'デモでテスト失敗時にデプロイが止まる流れを確認してください。',
       },
     ],
   },
@@ -263,7 +260,6 @@ jobs:
       - uses: cloudflare/wrangler-action@v3
         with:
           apiToken: \${{ secrets.CLOUDFLARE_API_TOKEN }}`,
-        tip: 'デモでビルド → デプロイの流れを体験してください。',
       },
     ],
   },
@@ -299,7 +295,6 @@ jobs:
         heading: 'GitHub Environments',
         content:
           'environment: production を指定すると、デプロイ前に承認が必要な設定や、環境ごとのシークレットを使えます。本番デプロイに人間の確認を挟むチーム向けの機能です。',
-        tip: 'デモで PR と main で異なるデプロイ先になる流れを確認してください。',
       },
     ],
   },
@@ -373,7 +368,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Production deployed"`,
-        tip: 'デモで PR → プレビュー → マージ → 本番の流れを確認してください。',
       },
       {
         heading: 'ロールバック',

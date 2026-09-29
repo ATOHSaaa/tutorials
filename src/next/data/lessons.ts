@@ -27,7 +27,6 @@ export const lessons: Lesson[] = [
         heading: 'React との関係',
         content:
           'React = UI ライブラリ（部品を作る）\nNext.js = React + ルーティング + サーバー機能 + 最適化\n\nNext.js を使うには React の知識が必要です。コンポーネント、Props、State、Hooks はそのまま使えます。Next.js が追加するのは「ページの構造」「データの取得方法」「表示の最適化」です。',
-        tip: 'デモで React 単体と Next.js の違いを確認してみてください。',
       },
       {
         heading: 'Next.js が向いているプロジェクト',
@@ -132,7 +131,6 @@ export default function RootLayout({
 └── blog/
     ├── layout.tsx      ← ブログだけのレイアウト
     └── page.tsx`,
-        tip: 'デモでレイアウトの入れ子構造を確認してください。',
       },
     ],
   },
@@ -209,7 +207,6 @@ export default async function PostsPage() {
 const res = await fetch(url, {
   next: { revalidate: 60 }
 });`,
-        tip: 'デモでデータ取得の流れを確認してください。',
       },
     ],
   },
@@ -295,7 +292,6 @@ export async function POST(request: Request) {
         heading: '使いどころ',
         content:
           'フォーム送信の処理、外部 API のプロキシ、認証、データベースへの書き込みなど、サーバー側で処理したいときに使います。フロントエンドとバックエンドを1つのプロジェクトで管理できるのが Next.js の強みです。',
-        tip: 'デモで API の流れを確認してください。',
       },
     ],
   },

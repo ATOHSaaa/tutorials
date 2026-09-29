@@ -21,7 +21,6 @@ export const lessons: Lesson[] = [
       {
         heading: "Three.js とは",
         content: "Three.js は WebGL を抽象化した JavaScript 3D ライブラリです。低レベルのシェーダー言語（GLSL）を直接書かなくても、シーン・カメラ・ライト・メッシュの概念で 3D 世界を構築できます。\n\nポートフォリオの 3D ヒーロー、製品ビューア、データの 3D 可視化、ゲームなど幅広く使われています。",
-        tip: "デモで 3D シーンの構成要素を確認してみてください。"
       },
       {
         heading: "WebGL との関係",

@@ -27,7 +27,6 @@ export const lessons: Lesson[] = [
         heading: 'なぜ DOM 操作を学ぶのか？',
         content:
           '• ボタンクリックで表示を変える\n• フォームの入力をリアルタイムに反映\n• リストに項目を追加する\n• モーダルを開閉する\n\nReact 以前はこれがフロントエンドの基本。今でも DevTools、小さなスクリプト、レガシーコードで必須スキルです。',
-        tip: 'デモで DOM ツリーの構造を確認してください。',
       },
       {
         heading: 'document オブジェクト',
@@ -61,7 +60,6 @@ items.forEach(el => console.log(el.textContent));`,
         code: `document.getElementById('header');
 document.getElementsByClassName('item');
 document.getElementsByTagName('p');`,
-        tip: 'デモでセレクタを変えて要素を取得してみてください。',
       },
       {
         heading: 'セレクタのコツ',
@@ -94,7 +92,6 @@ input.value = '田中';       // 書き込み
 
 const check = document.querySelector('#agree');
 check.checked = true;`,
-        tip: 'デモでテキストと HTML の変更を試してください。',
       },
       {
         heading: 'insertAdjacentHTML',
@@ -129,7 +126,6 @@ box.classList.add('active');
 box.classList.remove('hidden');
 box.classList.toggle('open');       // あれば削除、なければ追加
 box.classList.contains('active');   // true/false`,
-        tip: 'デモで classList のトグルを試してください。',
       },
       {
         heading: 'aria 属性',
@@ -156,7 +152,6 @@ el.style.transform = 'translateX(100px)';`,
         heading: 'クラスで制御する方がよい場合',
         content:
           '複数のプロパティをまとめて変えるなら CSS クラスの追加がベター。style は1〜2プロパティの動的変更向けです。CSS チュートリアルで定義した .active { ... } を classList.add で付けます。',
-        tip: 'デモでスタイルとクラスの切り替えを比較してください。',
       },
       {
         heading: 'getComputedStyle',
@@ -190,7 +185,6 @@ btn.addEventListener('click', (event) => {
         heading: 'よく使うイベント',
         content:
           'click、input、change、submit、keydown、mouseenter/mouseleave、focus/blur。フォームは input（リアルタイム）と change（確定時）の使い分けが重要です。',
-        tip: 'デモでクリック・入力イベントを試してください。',
       },
       {
         heading: 'removeEventListener',
@@ -220,7 +214,6 @@ list.addEventListener('click', (event) => {
         heading: 'なぜ便利か？',
         content:
           '• 100個のボタンに100個のリスナー → 1個で済む\n• 後から追加した要素も自動で対応\n• メモリ効率が良い',
-        tip: 'デモでリスト項目のクリック委譲を試してください。',
       },
       {
         heading: 'closest と matches',
@@ -251,7 +244,6 @@ li.remove();         // 要素を削除`,
         heading: 'DocumentFragment',
         content:
           '大量の要素を追加するとき、Fragment にまとめてから1回 append すると再描画が1回で済み、パフォーマンスが向上します。',
-        tip: 'デモでリストへの項目追加を試してください。',
       },
       {
         heading: 'cloneNode',
@@ -280,7 +272,6 @@ el.previousElementSibling;`,
         heading: 'querySelector は子孫から',
         content:
           '要素内の子孫を探すときは el.querySelector(".child")。document 全体からではなく、スコープを限定できます。',
-        tip: 'デモで DOM ツリーの親子関係を確認してください。',
       },
       {
         heading: 'matches',

@@ -27,7 +27,6 @@ export const lessons: Lesson[] = [
         heading: 'なぜ必要か？',
         content:
           '• 障害の早期発見 — ユーザーが報告する前に気づける\n• 信頼性の担保 — SLA（サービス品質保証）の達成\n• デプロイ後の確認 — CI/CD でデプロイした直後の動作確認\n• 安心感 — 24時間誰かが見守っている状態',
-        tip: 'デモで Up / Down の判定フローを確認してください。',
       },
       {
         heading: '監視の種類',
@@ -67,7 +66,6 @@ export default {
         heading: 'Liveness vs Readiness',
         content:
           'Kubernetes などでは2種類に分けます。\n\n• Liveness — プロセスが生きているか（死んでいれば再起動）\n• Readiness — リクエストを受け付けられるか（DB 接続済みか等）\n\n小規模アプリでは /health にまとめても問題ありません。',
-        tip: 'デモでヘルスチェックのレスポンスを確認してください。',
       },
       {
         heading: '深いヘルスチェック',
@@ -95,7 +93,6 @@ export default {
 
 curl -s https://example.com/health
 # → {"status":"ok"}`,
-        tip: 'デモで HTTP 監視の判定条件を試してください。',
       },
       {
         heading: '複数エンドポイント',
@@ -123,7 +120,6 @@ check 1: 200 OK  → Up
 check 2: timeout → まだ Up（1回失敗）
 check 3: timeout → Down 判定 → アラート送信
 check 4: 200 OK  → Up 復帰 → 復旧通知`,
-        tip: 'デモで連続失敗による Down 判定を体験してください。',
       },
       {
         heading: 'メンテナンスウィンドウ',
@@ -149,7 +145,6 @@ check 4: 200 OK  → Up 復帰 → 復旧通知`,
         code: `# Slack Webhook 例（監視サービス側で設定）
 # Down → #alerts チャンネルに投稿
 # "example.com is DOWN (HTTP 503)"`,
-        tip: 'デモでアラートの流れを確認してください。',
       },
       {
         heading: 'アラート疲れを防ぐ',
@@ -172,7 +167,6 @@ check 4: 200 OK  → Up 復帰 → 復旧通知`,
         heading: '公開する情報',
         content:
           '• 各コンポーネントの状態（API、Web、DB）\n• 過去のインシデント履歴\n• 計画メンテナンスの予定\n• 稼働率（99.9% など）',
-        tip: 'デモでステータスページの構成を確認してください。',
       },
       {
         heading: 'ツール',
@@ -195,7 +189,6 @@ check 4: 200 OK  → Up 復帰 → 復旧通知`,
         heading: '内部監視',
         content:
           'サーバー内で CPU、メモリ、ディスク、プロセス数を監視。Datadog、Prometheus + Grafana、CloudWatch など。外形監視ではわからない「サーバーは生きているがアプリがハング」も検知できます。',
-        tip: 'デモで外形と内部監視の違いを確認してください。',
       },
       {
         heading: '組み合わせ',
@@ -230,7 +223,6 @@ jobs:
       - run: |
           code=$(curl -s -o /dev/null -w "%{http_code}" https://myapp.com/health)
           [ "$code" = "200" ] || exit 1`,
-        tip: 'デモで監視ツールの比較を確認してください。',
       },
       {
         heading: '選び方',
@@ -253,7 +245,6 @@ jobs:
         heading: 'ポストモーテム',
         content:
           '障害後に「何が起きたか」「なぜ起きたか」「どう防ぐか」を文書化。非難ではなく改善のための振り返りです。Google SRE の文化で広まったプラクティスです。',
-        tip: 'デモで障害対応のタイムラインを確認してください。',
       },
       {
         heading: 'Runbook',

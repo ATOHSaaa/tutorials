@@ -25,7 +25,6 @@ export const lessons: Lesson[] = [
       {
         heading: "VM との違い",
         content: "仮想マシン（VM）は OS 全体を仮想化し、数 GB のディスクと数分の起動時間が必要です。コンテナはホスト OS のカーネルを共有し、数 MB〜数百 MB、数秒で起動します。\n\nVM は強い隔離が必要な場合、コンテナはアプリの配布・実行が目的の場合に適しています。",
-        tip: "デモで docker run hello-world を実行し、コンテナが起動して終了する流れを確認してみてください。"
       },
       {
         heading: "Docker の構成要素",
@@ -70,7 +69,6 @@ export const lessons: Lesson[] = [
       {
         heading: "コンテナ内の操作",
         content: "docker exec -it コンテナ名 sh でコンテナ内のシェルに入ります。デバッグやログ確認に使います。\n\ndocker logs -f でリアルタイムログを追跡できます。",
-        tip: "デモで nginx コンテナを起動し、localhost:8080 でアクセスしてみてください。"
       }
     ]
   },
@@ -175,7 +173,6 @@ export const lessons: Lesson[] = [
       {
         heading: "ビルドのデバッグ",
         content: "docker build --no-cache でキャッシュを無視して再ビルド。--progress=plain で詳細なビルドログを表示します。",
-        tip: "デモで意図的に壊れた Dockerfile をビルドし、エラーメッセージを読み解いてみてください。"
       }
     ]
   },

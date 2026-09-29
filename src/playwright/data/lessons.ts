@@ -25,7 +25,6 @@ export const lessons: Lesson[] = [
       {
         heading: "Playwright の特徴",
         content: "Microsoft が開発。Chromium、Firefox、WebKit の3ブラウザをサポート。自動待機（auto-wait）で flaky テストを削減。Codegen で操作を録画してテスト生成。\n\nSelenium や Cypress と比べ、マルチブラウザ対応、並列実行、トレースビューアが強みです。",
-        tip: "デモで Codegen を起動し、ブラウザ操作を録画してテストコードを生成してみてください。"
       },
       {
         heading: "テストピラミッド",
@@ -114,7 +113,6 @@ export const lessons: Lesson[] = [
       {
         heading: "スクリーンショット比較",
         content: "toHaveScreenshot() でビジュアルリグレッションテストを実行します。初回実行でベースライン画像を生成し、以降は差分を検出します。",
-        tip: "デモで --ui モードでテストを実行し、各ステップのスクリーンショットを確認してみてください。"
       }
     ]
   },
@@ -196,7 +194,6 @@ export const lessons: Lesson[] = [
       {
         heading: "デバッグの Tips",
         content: "page.pause() でテストを一時停止し、Playwright Inspector で操作を試せます。--debug フラグでステップ実行モードになります。\n\nflaky テストは retries を増やすのではなく、根本原因（タイミング依存、不安定なセレクタ）を修正しましょう。",
-        tip: "デモで意図的に失敗するテストを書き、トレースビューアで原因を特定してみてください。"
       }
     ]
   },

@@ -29,7 +29,6 @@ export const lessons: Lesson[] = [
       {
         heading: "ユースケース",
         content: "• チャットアプリ • リアルタイム通知 • 共同編集 • ライブスコア • IoT データ配信 • オンラインゲーム\n\nSupabase Realtime、Socket.IO、Pusher などのライブラリ/サービスが WebSocket を抽象化しています。",
-        tip: "デモで WebSocket 接続のハンドシェイクを Network タブで確認してみてください。"
       }
     ]
   },
@@ -111,7 +110,6 @@ export const lessons: Lesson[] = [
       {
         heading: "Presence（オンライン状態）",
         content: "接続・切断時にユーザーのオンライン状態を更新し、ルーム内のメンバーに配信します。Socket.IO の socket.data でユーザー情報を保持します。",
-        tip: "デモで2つのブラウザタブを開き、チャットメッセージがリアルタイムで同期されることを確認してみてください。"
       }
     ]
   },

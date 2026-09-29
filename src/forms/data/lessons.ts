@@ -27,7 +27,6 @@ export const lessons: Lesson[] = [
         heading: 'フォームの2つの管理方法',
         content:
           '• 制御コンポーネント — React の state が入力値の「唯一の情報源」\n• 非制御コンポーネント — DOM が値を保持、ref で取得\n\nReact では制御コンポーネントが主流です。',
-        tip: 'デモでフォームの基本構造を確認してください。',
       },
       {
         heading: '実務で求められること',
@@ -70,7 +69,6 @@ export const lessons: Lesson[] = [
         heading: 'オブジェクトでまとめる',
         content:
           'フィールドが増えると個別の useState は煩雑です。1つのオブジェクト state にまとめるパターンもありますが、再レンダリングが増える点に注意します。',
-        tip: 'デモで制御コンポーネントの動作を確認してください。',
       },
       {
         heading: 'チェックボックスと select',
@@ -102,7 +100,6 @@ function validate() {
   setErrors(e);
   return Object.keys(e).length === 0;
 }`,
-        tip: 'デモでバリデーションエラーの表示を確認してください。',
       },
       {
         heading: 'HTML5 バリデーション',
@@ -133,7 +130,6 @@ type LoginForm = z.infer<typeof loginSchema>;`,
         heading: 'safeParse',
         content:
           'schema.safeParse(data) で成功/失敗を判定。失敗時は error.flatten() でフィールドごとのエラーを取得できます。',
-        tip: 'デモで Zod スキーマのバリデーションを試してください。',
       },
       {
         heading: 'TypeScript との相性',
@@ -172,7 +168,6 @@ function Form() {
         code: `const form = useForm({
   resolver: zodResolver(loginSchema),
 });`,
-        tip: 'デモで React Hook Form の登録・送信を確認してください。',
       },
       {
         heading: 'Controller',
@@ -195,7 +190,6 @@ function Form() {
         heading: 'エラーのタイミング',
         content:
           'onSubmit（送信時）、onBlur（フォーカスが外れた時）、onChange（入力中）——onSubmit + onBlur の組み合わせが一般的です。',
-        tip: 'デモでエラー表示の良い例・悪い例を比較してください。',
       },
       {
         heading: 'サーバーエラー',
@@ -222,7 +216,6 @@ function Form() {
         heading: '条件付きフィールド',
         content:
           '「法人の場合は会社名を表示」など、watch で値を監視し条件付きレンダリング。Zod の .refine() で条件付きバリデーションも可能です。',
-        tip: 'デモで動的フィールドの追加・削除を確認してください。',
       },
       {
         heading: 'ネストされたオブジェクト',
@@ -259,7 +252,6 @@ function Form() {
         heading: 'TanStack Query の useMutation',
         content:
           'フォーム送信は useMutation と相性が良いです。isPending、onSuccess、onError が使えます。',
-        tip: 'デモで送信〜成功/失敗の流れを確認してください。',
       },
       {
         heading: '二重送信の防止',
@@ -289,7 +281,6 @@ function Form() {
         heading: 'フォーカス管理',
         content:
           '送信後に最初のエラーフィールドにフォーカスを移す。RHF の setFocus が使えます。',
-        tip: 'デモでアクセシブルなフォームを確認してください。',
       },
       {
         heading: 'autocomplete 属性',

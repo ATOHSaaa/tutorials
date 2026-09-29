@@ -27,7 +27,6 @@ export const lessons: Lesson[] = [
         heading: 'クライアント状態 vs サーバー状態',
         content:
           '• クライアント状態 — UI の開閉、テーマ、フォーム入力など、アプリ内だけで完結\n• サーバー状態 — API から取得したデータ。キャッシュ・再取得・同期が課題\n\n管理手法はこの2つで異なります。',
-        tip: 'デモで状態の流れを確認してください。',
       },
       {
         heading: 'なぜ専用ライブラリが必要？',
@@ -59,7 +58,6 @@ export const lessons: Lesson[] = [
         heading: 'Props drilling の問題',
         content:
           '深い階層で状態を渡すと、中間コンポーネントが使わない Props を渡すだけの「Props drilling」が発生します。これが Context や Zustand の出番です。',
-        tip: 'デモで Props の流れを追ってみてください。',
       },
       {
         heading: '単方向データフロー',
@@ -97,7 +95,6 @@ function Page() {
         heading: 'Context の注意点',
         content:
           '値が変わると Provider 内のすべての useContext が再レンダリングされます。頻繁に変わる大きな状態には向きません。複数の Context に分割するのが対策です。',
-        tip: 'デモで Context のデータフローを確認してください。',
       },
       {
         heading: 'カスタム Hook 化',
@@ -132,7 +129,6 @@ function Counter() {
         heading: 'セレクタで再レンダリングを抑える',
         content:
           'useStore((s) => s.count) のように必要な部分だけ購読。Context より細かい更新制御ができます。',
-        tip: 'デモで Zustand のカウンターを試してください。',
       },
       {
         heading: 'devtools と persist',
@@ -158,7 +154,6 @@ const total = items.reduce((sum, i) => sum + i.price, 0);
         heading: 'useMemo との使い分け',
         content:
           '計算が重い場合は useMemo でメモ化。Zustand ではストア内に getter を定義するパターンもあります。',
-        tip: 'デモで派生状態の計算を確認してください。',
       },
       {
         heading: '正規化',
@@ -186,7 +181,6 @@ useEffect(() => { /* fetch... */ }, []);`,
         heading: 'サーバー状態の特徴',
         content:
           '• 非同期 — 取得に時間がかかる\n• 共有 — 複数画面で同じデータを使う\n• 鮮度 — いつ古くなるか、いつ再取得するか\n• キャッシュ — 取得済みデータの再利用',
-        tip: 'デモでローディング・エラー・成功の状態遷移を確認してください。',
       },
       {
         heading: '専用ライブラリの価値',
@@ -221,7 +215,6 @@ function UserList() {
         heading: 'useMutation',
         content:
           'POST/PUT/DELETE などの変更操作は useMutation。成功後に queryClient.invalidateQueries で関連データを再取得します。',
-        tip: 'デモで TanStack Query のデータフローを確認してください。',
       },
       {
         heading: 'キャッシュと staleTime',
@@ -244,7 +237,6 @@ function UserList() {
         heading: 'フォーム状態はローカル',
         content:
           '入力中のフォームはグローバルストアに入れない。React Hook Form でローカル管理し、送信成功後にサーバー状態を更新するのが一般的です。',
-        tip: 'デモで状態の配置場所を確認してください。',
       },
       {
         heading: '楽観的更新',
@@ -267,7 +259,6 @@ function UserList() {
         heading: '過剰な抽象化を避ける',
         content:
           '最初から Redux を入れる必要はありません。useState → 困ったら Context → さらに困ったら Zustand / TanStack Query の順で足すのがおすすめです。',
-        tip: 'デモで各手法の比較表を確認してください。',
       },
       {
         heading: 'Next.js App Router との関係',

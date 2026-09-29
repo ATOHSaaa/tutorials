@@ -22,7 +22,6 @@ export const lessons: Lesson[] = [
         heading: 'エッジコンピューティングとは',
         content:
           'エッジコンピューティング（Edge Computing）は、データや処理を「ユーザーに近い場所」で行う考え方です。従来はブラウザ → サーバー（東京や米国のデータセンター）という1本の経路で通信していましたが、エッジでは世界中に分散した PoP（Point of Presence）でコンテンツ配信やコード実行を行います。\n\nCDN が画像や JS を近くから配るのはエッジの一例です。近年は静的ファイルだけでなく、API や認証、データベース操作までエッジで実行できるようになっています。',
-        tip: 'デモで「中央のサーバー」vs「エッジ」のデータの流れを比較してみてください。',
       },
       {
         heading: 'クラウドとエッジの関係',
@@ -50,7 +49,6 @@ export const lessons: Lesson[] = [
         heading: 'レイテンシ（遅延）の問題',
         content:
           'HTTP リクエストの往復時間（RTT）は、物理距離に大きく依存します。大阪から東京なら 20〜40ms、米国西海岸なら 100ms 以上かかることもあります。\n\nAPI を3回呼ぶだけで 300ms 超になることも珍しくありません。エッジで処理を完結させれば、遠いリージョンへの往復を減らし、体感速度を改善できます。',
-        tip: 'デモで地理的な距離とレイテンシの関係を確認してみてください。',
       },
       {
         heading: 'スケールと可用性',
@@ -89,7 +87,6 @@ export const lessons: Lesson[] = [
         heading: '判断のチェックリスト',
         content:
           '次の質問で、エッジ向きかどうかを判断できます。\n\n• レイテンシが UX に直結する？（リアルタイム、ゲーム、決済）\n• 読み取りが多く、データが軽い？\n• グローバルにユーザーを持つ？\n• 処理は短時間で終わる？（エッジには実行時間制限あり）\n\n逆に、長時間バッチ、大容量ファイル処理、複雑なトランザクションはクラウド向きです。',
-        tip: 'デモで処理の種類ごとに「エッジ向き / クラウド向き」を確認してみてください。',
       },
     ],
   },
@@ -112,7 +109,6 @@ Cache-Control: public, max-age=31536000, immutable
 
 # API レスポンス（短いキャッシュ）
 Cache-Control: public, max-age=60, s-maxage=300`,
-        tip: 'デモでキャッシュヒットとミスの違いを体験してみてください。',
       },
       {
         heading: 'CDN からエッジコンピューティングへ',
@@ -145,7 +141,6 @@ export default {
     return new Response('Not Found', { status: 404 });
   },
 };`,
-        tip: 'デモでエッジ関数のリクエスト処理の流れを確認してみてください。',
       },
       {
         heading: '向いている処理',
@@ -181,7 +176,6 @@ if (cached) return cached;`,
         heading: 'エッジ DB の注意点',
         content:
           'Cloudflare D1 や Turso は SQLite ベースで、エッジからアクセスできます。読み取りは高速ですが、書き込みのレプリケーションや整合性には制約があります。\n\n「すべてのデータをエッジ DB に」ではなく、読み取り多めのデータ（設定、商品カタログの一部）を置き、注文・決済は中央 DB に置くハイブリッドが現実的です。',
-        tip: 'デモで KV・キャッシュ・DB の使い分けを比較してみてください。',
       },
     ],
   },
@@ -204,7 +198,6 @@ Cache-Control: private, no-store
 
 # 公開 API — CDN で 5分キャッシュ
 Cache-Control: public, s-maxage=300`,
-        tip: 'デモでユーザーの位置とレスポンス経路の違いを確認してみてください。',
       },
       {
         heading: 'Core Web Vitals との関係',
@@ -233,7 +226,6 @@ if (!token || !await verifyJwt(token)) {
         heading: 'パーソナライズと A/B テスト',
         content:
           'Cookie やヘッダーを見て、エッジでユーザーを振り分けます。A/B テストのバリアント決定、地域別リダイレクト、言語切り替えなどがエッジ向きです。\n\nオリジンまで行かずに振り分けできるため、レスポンスが速く、オリジン負荷も減ります。',
-        tip: 'デモで A/B 振り分けのイメージを確認してみてください。',
       },
       {
         heading: 'API ゲートウェイと BFF',
@@ -251,7 +243,6 @@ if (!token || !await verifyJwt(token)) {
         heading: 'プラットフォーム一覧',
         content:
           '• Cloudflare Workers — 最大規模のエッジネットワーク。D1/R2/KV と統合\n• Vercel Edge Functions — Next.js と相性が良い。Middleware もエッジ\n• Netlify Edge Functions — Deno ベース。Jamstack 向け\n• AWS Lambda@Edge / CloudFront Functions — AWS エコシステム内\n• Fastly Compute@Edge — 低レイテンシ CDN + コンピュート',
-        tip: 'デモで各プラットフォームの特徴を比較してみてください。',
       },
       {
         heading: '選び方のヒント',

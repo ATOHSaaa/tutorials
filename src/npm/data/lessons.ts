@@ -25,7 +25,6 @@ export const lessons: Lesson[] = [
       {
         heading: "yarn と pnpm",
         content: "代替のパッケージマネージャーに yarn と pnpm があります。pnpm はディスク容量を節約するシンボリックリンク方式、yarn は Plug'n'Play など独自機能があります。\n\n基本概念（package.json、semver、lockfile）は共通です。npm を理解すれば他のツールにもすぐ移行できます。",
-        tip: "デモで npm install の実行ログを追い、何が起きているか確認してみてください。"
       },
       {
         heading: "node_modules",
@@ -70,7 +69,6 @@ export const lessons: Lesson[] = [
       {
         heading: "インストールの仕組み",
         content: "npm は依存グラフを解決し、互換性のあるバージョンを選んでダウンロードします。peerDependencies（React プラグインが React 本体を要求するなど）の警告は無視せず、適切なバージョンを揃えます。\n\n`npm ls react` で依存ツリーを確認、`npm why lodash` でなぜそのパッケージが入っているか調べられます。",
-        tip: "デモで npm ls の出力を見て、推移的依存の深さを確認してみてください。"
       }
     ]
   },

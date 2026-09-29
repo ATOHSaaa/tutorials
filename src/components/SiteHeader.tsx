@@ -12,6 +12,7 @@ export function SiteHeader() {
         </SiteLink>
         <nav className="site-header-nav">
           <SiteLink href="/quizzes" className="site-header-link">クイズ</SiteLink>
+          <SiteLink href="/debug" className="site-header-link">デバッグ</SiteLink>
           <LevelButton />
         </nav>
       </div>

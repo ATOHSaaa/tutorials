@@ -25,7 +25,6 @@ export const lessons: Lesson[] = [
       {
         heading: "GraphQL の特徴",
         content: "単一エンドポイント（通常 /graphql）に POST でクエリを送ります。型システム（スキーマ）で API の契約が明確になり、Introspection でドキュメント自動生成も可能です。\n\nFacebook が2012年に開発し、2015年に公開。GitHub、Shopify、Twitter など大規模サービスで採用されています。",
-        tip: "デモで同じエンドポイントに異なるクエリを送り、レスポンスの差を確認してみてください。"
       },
       {
         heading: "REST との使い分け",
@@ -114,7 +113,6 @@ export const lessons: Lesson[] = [
       {
         heading: "楽観的 UI",
         content: "Apollo Client では update 関数でキャッシュを即座に更新し、サーバーレスポンスで確定します。UX が向上しますが、エラー時のロールバック処理が必要です。",
-        tip: "デモで Mutation 実行後にキャッシュがどう更新されるか確認してみてください。"
       }
     ]
   },
@@ -175,7 +173,6 @@ export const lessons: Lesson[] = [
       {
         heading: "総件数の取得",
         content: "Offset 方式では count クエリを別途用意します。Cursor 方式では totalCount を Connection に含めるか、別フィールドで提供するかを API 設計で決めます。",
-        tip: "デモで Cursor ページネーションの「次のページ」取得を試してみてください。"
       }
     ]
   },

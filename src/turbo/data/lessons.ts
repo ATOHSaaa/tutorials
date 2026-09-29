@@ -26,7 +26,6 @@ export const lessons: Lesson[] = [
         heading: "基本の考え方",
         content: "Turborepo では、このテーマがプロジェクト全体のどこに位置するかを意識することが大切です。\n\n小さな例から始めて、徐々に実プロジェクトの構成へ広げていくのがおすすめです。",
         code: "npx create-turbo@latest\nnpm run dev --filter=web",
-        tip: "インタラクティブデモで、概念の流れを確認してみてください。"
       },
       {
         heading: "実践のポイント",
@@ -47,7 +46,6 @@ export const lessons: Lesson[] = [
         heading: "基本の考え方",
         content: "Turborepo では、このテーマがプロジェクト全体のどこに位置するかを意識することが大切です。\n\n小さな例から始めて、徐々に実プロジェクトの構成へ広げていくのがおすすめです。",
         code: "npx create-turbo@latest\nnpm run dev --filter=web",
-        tip: "インタラクティブデモで、概念の流れを確認してみてください。"
       },
       {
         heading: "実践のポイント",
@@ -68,7 +66,6 @@ export const lessons: Lesson[] = [
         heading: "基本の考え方",
         content: "Turborepo では、このテーマがプロジェクト全体のどこに位置するかを意識することが大切です。\n\n小さな例から始めて、徐々に実プロジェクトの構成へ広げていくのがおすすめです。",
         code: "npx create-turbo@latest\nnpm run dev --filter=web",
-        tip: "インタラクティブデモで、概念の流れを確認してみてください。"
       },
       {
         heading: "実践のポイント",
@@ -89,7 +86,6 @@ export const lessons: Lesson[] = [
         heading: "基本の考え方",
         content: "Turborepo では、このテーマがプロジェクト全体のどこに位置するかを意識することが大切です。\n\n小さな例から始めて、徐々に実プロジェクトの構成へ広げていくのがおすすめです。",
         code: "npx create-turbo@latest\nnpm run dev --filter=web",
-        tip: "インタラクティブデモで、概念の流れを確認してみてください。"
       },
       {
         heading: "実践のポイント",
@@ -110,7 +106,6 @@ export const lessons: Lesson[] = [
         heading: "基本の考え方",
         content: "Turborepo では、このテーマがプロジェクト全体のどこに位置するかを意識することが大切です。\n\n小さな例から始めて、徐々に実プロジェクトの構成へ広げていくのがおすすめです。",
         code: "npx create-turbo@latest\nnpm run dev --filter=web",
-        tip: "インタラクティブデモで、概念の流れを確認してみてください。"
       },
       {
         heading: "実践のポイント",
@@ -131,7 +126,6 @@ export const lessons: Lesson[] = [
         heading: "基本の考え方",
         content: "Turborepo では、このテーマがプロジェクト全体のどこに位置するかを意識することが大切です。\n\n小さな例から始めて、徐々に実プロジェクトの構成へ広げていくのがおすすめです。",
         code: "npx create-turbo@latest\nnpm run dev --filter=web",
-        tip: "インタラクティブデモで、概念の流れを確認してみてください。"
       },
       {
         heading: "実践のポイント",
@@ -152,7 +146,6 @@ export const lessons: Lesson[] = [
         heading: "基本の考え方",
         content: "Turborepo では、このテーマがプロジェクト全体のどこに位置するかを意識することが大切です。\n\n小さな例から始めて、徐々に実プロジェクトの構成へ広げていくのがおすすめです。",
         code: "npx create-turbo@latest\nnpm run dev --filter=web",
-        tip: "インタラクティブデモで、概念の流れを確認してみてください。"
       },
       {
         heading: "実践のポイント",
@@ -173,7 +166,6 @@ export const lessons: Lesson[] = [
         heading: "基本の考え方",
         content: "Turborepo では、このテーマがプロジェクト全体のどこに位置するかを意識することが大切です。\n\n小さな例から始めて、徐々に実プロジェクトの構成へ広げていくのがおすすめです。",
         code: "npx create-turbo@latest\nnpm run dev --filter=web",
-        tip: "インタラクティブデモで、概念の流れを確認してみてください。"
       },
       {
         heading: "実践のポイント",
@@ -194,7 +186,6 @@ export const lessons: Lesson[] = [
         heading: "基本の考え方",
         content: "Turborepo では、このテーマがプロジェクト全体のどこに位置するかを意識することが大切です。\n\n小さな例から始めて、徐々に実プロジェクトの構成へ広げていくのがおすすめです。",
         code: "npx create-turbo@latest\nnpm run dev --filter=web",
-        tip: "インタラクティブデモで、概念の流れを確認してみてください。"
       },
       {
         heading: "実践のポイント",
@@ -215,7 +206,6 @@ export const lessons: Lesson[] = [
         heading: "基本の考え方",
         content: "Turborepo では、このテーマがプロジェクト全体のどこに位置するかを意識することが大切です。\n\n小さな例から始めて、徐々に実プロジェクトの構成へ広げていくのがおすすめです。",
         code: "npx create-turbo@latest\nnpm run dev --filter=web",
-        tip: "インタラクティブデモで、概念の流れを確認してみてください。"
       },
       {
         heading: "実践のポイント",

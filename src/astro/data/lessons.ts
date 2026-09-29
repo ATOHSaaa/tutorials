@@ -27,7 +27,6 @@ export const lessons: Lesson[] = [
         heading: 'なぜ Astro は速いの？',
         content:
           'Astro の核心は「アイランドアーキテクチャ」です。ページの大部分は静的な HTML として配信し、インタラクティブな部分だけを JavaScript で動かします。\n\nたとえばブログ記事ページなら、本文は HTML だけ。コメント欄や「いいねボタン」だけが JavaScript で動く——この考え方で、不要な JS を送らずページを軽く保てます。',
-        tip: 'デモで「全部 JS」vs「アイランド方式」の違いを確認してみてください。',
       },
       {
         heading: 'Astro が向いているサイト',
@@ -130,7 +129,6 @@ import Card from '../components/Card.astro';
 
 <Card title="記事1" description="これは記事の説明です" />
 <Card title="記事2" description="2つ目の記事です" />`,
-        tip: 'デモで同じ Card コンポーネントを3回使っている例を見てみてください。',
       },
     ],
   },
@@ -278,7 +276,6 @@ import Counter from '../components/Counter.jsx';
         heading: 'アイランドの考え方',
         content:
           'ページは静的な HTML。カウンターやフォームなど、動きが必要な部分だけが「アイランド」として JavaScript で動きます。海（HTML）の中に島（JS）が浮かぶイメージです。\n\nこれにより、ブログ記事のようなページは JS ほぼゼロで配信でき、必要な部分だけインタラクティブにできます。',
-        tip: 'デモでアイランド方式のページ構成を確認してください。',
       },
     ],
   },

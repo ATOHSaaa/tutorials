@@ -27,7 +27,6 @@ export const lessons: Lesson[] = [
         heading: 'なぜ重要か？',
         content:
           '• 法的要件 — 多くの国で Web アクセシビリティが法律で求められています\n• ユーザー体験 — キーボード操作、読み上げ対応で全員が快適に\n• SEO — セマンティック HTML は検索エンジンにも好まれる\n• 品質 — アクセシブルなコードは保守性も高い',
-        tip: 'デモで良い例・悪い例の違いを体感してください。',
       },
       {
         heading: 'WCAG とは',
@@ -60,7 +59,6 @@ export const lessons: Lesson[] = [
         heading: '見出しの階層',
         content:
           'h1 はページに1つ、h2 → h3 と順番に使います。飛ばし（h1 の次に h3）は避けます。目次や読み上げのナビゲーションに使われます。',
-        tip: 'デモでセマンティック構造と div だけの構造を比較してください。',
       },
       {
         heading: 'button と a の使い分け',
@@ -88,7 +86,6 @@ export const lessons: Lesson[] = [
 
 <!-- 良い例 -->
 <button type="submit">送信</button>`,
-        tip: 'デモで Tab キーでのフォーカス移動を試してください。',
       },
       {
         heading: 'スキップリンク',
@@ -119,7 +116,6 @@ button:focus-visible {
         heading: 'フォーカストラップ',
         content:
           'モーダルを開いたとき、フォーカスをモーダル内に閉じ込め、閉じるまで背景にフォーカスが行かないようにします。Esc キーで閉じるのも標準的なパターンです。',
-        tip: 'デモでモーダルのフォーカストラップを確認してください。',
       },
       {
         heading: 'フォーカスの復帰',
@@ -150,7 +146,6 @@ button:focus-visible {
 <div aria-live="polite" role="status">
   保存しました
 </div>`,
-        tip: 'デモで aria-expanded の開閉状態を確認してください。',
       },
       {
         heading: 'role 属性',
@@ -178,7 +173,6 @@ button:focus-visible {
         heading: '良い alt の書き方',
         content:
           '「画像」「写真」は不要。画像がリンクの中にある場合はリンクの目的を説明します。長い説明は alt ではなくfigcaption や近くのテキストで。',
-        tip: 'デモで alt あり・なしの違いを確認してください。',
       },
       {
         heading: 'SVG とアイコン',
@@ -201,7 +195,6 @@ button:focus-visible {
         heading: '色だけに頼らない',
         content:
           'エラーは赤色だけでなく、テキストやアイコンでも示します。リンクは色だけでなく下線も付けます。色覚多様性に配慮します。',
-        tip: 'デモでコントラストの良い例・悪い例を比較してください。',
       },
       {
         heading: 'チェックツール',
@@ -232,7 +225,6 @@ button:focus-visible {
         heading: 'エラー表示',
         content:
           'aria-invalid="true"、aria-describedby でエラーメッセージを入力に関連付けます。エラーは色だけでなくテキストで伝えます。',
-        tip: 'デモでアクセシブルなフォームと問題のあるフォームを比較してください。',
       },
       {
         heading: '必須項目',
@@ -255,7 +247,6 @@ button:focus-visible {
         heading: '手動テスト',
         content:
           '• キーボードだけで全操作できるか\n• スクリーンリーダー（VoiceOver、NVDA）で読み上げを確認\n• 200% ズームでレイアウトが崩れないか\n• アニメーションを減らす設定（prefers-reduced-motion）',
-        tip: 'デモで Lighthouse のアクセシビリティチェック項目を確認してください。',
       },
       {
         heading: 'CI に組み込む',

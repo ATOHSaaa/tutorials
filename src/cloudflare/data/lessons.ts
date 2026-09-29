@@ -27,7 +27,6 @@ export const lessons: Lesson[] = [
         heading: 'なぜ Cloudflare なのか？',
         content:
           '• エッジで実行 — ユーザーに近い場所でコードが動くため高速\n• ゼロコールドスタート — Workers は起動が速い\n• 従量課金 — 使った分だけ（無料枠も充実）\n• egress 無料 — R2 からのデータ転送料が無料\n• Vercel/Next.js 以外の選択肢として人気が上昇',
-        tip: 'デモで Cloudflare の3大サービス（Workers / D1 / R2）の関係を確認してください。',
       },
       {
         heading: 'このチュートリアルの範囲',
@@ -110,7 +109,6 @@ app.post('/api/users', async (c) => {
 });
 
 export default app;`,
-        tip: 'デモでルーティングの分岐を試してみてください。',
       },
     ],
   },
@@ -255,7 +253,6 @@ app.post('/api/users', async (c) => {
   ).bind(name, email).run();
   return c.json({ ok: true }, 201);
 });`,
-        tip: 'デモで D1 の CRUD 操作を体験してください。',
       },
     ],
   },
@@ -378,7 +375,6 @@ app.post('/api/files', async (c) => {
         heading: 'ローカル開発の流れ',
         content:
           '1. wrangler dev でローカル Worker 起動\n2. D1 は --local フラグでローカル SQLite を使用\n3. R2 はローカルエミュレーションまたは remote バインディング\n4. 問題なければ wrangler deploy で本番へ',
-        tip: 'デモで3サービスの連携フローを確認してください。',
       },
     ],
   },

@@ -25,7 +25,6 @@ export const lessons: Lesson[] = [
       {
         heading: "アニメーションの原則",
         content: "①目的がある——フィードバック、注意喚起、つながりの表現。②速い——200-300ms が UI アニメーションの標準。③自然——イージングで物理的な動きを再現。④控えめ——常にアニメーションしている UI は疲れる。",
-        tip: "デモでアニメーションあり/なしの UI を比較し、体験の違いを確認してみてください。"
       },
       {
         heading: "CSS vs JavaScript",
@@ -113,7 +112,6 @@ export const lessons: Lesson[] = [
       {
         heading: "spring アニメーション",
         content: "CSS にはないバネのような動きは JavaScript ライブラリ（Framer Motion の spring）で実現します。stiffness（硬さ）と damping（減衰）でバネの挙動を調整します。\n\n物理ベースのモーションはユーザーに「生きている」感覚を与えます。",
-        tip: "デモで異なるイージング関数の動きを比較してみてください。"
       }
     ]
   },

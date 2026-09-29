@@ -1,0 +1,180 @@
+.debug-hub {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 2rem 4rem;
+}
+
+.debug-hub-back {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.debug-hub-back:hover {
+  color: var(--text-heading);
+}
+
+.debug-hub-hero {
+  text-align: center;
+  padding: 1rem 0 2.5rem;
+}
+
+.debug-hub-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  margin-bottom: 1rem;
+}
+
+.debug-hub-hero h1 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.debug-hub-sub {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.debug-hub-progress {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.debug-hub-section {
+  margin-bottom: 2.5rem;
+}
+
+.debug-hub-section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 1rem;
+}
+
+.debug-hub-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.debug-hub-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.15rem;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.debug-hub-card:hover {
+  border-color: #4a5068;
+  background: var(--bg-3);
+}
+
+.debug-hub-card.solved {
+  border-color: rgba(34, 197, 94, 0.25);
+}
+
+.debug-hub-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #ef4444, #f59e0b);
+}
+
+.debug-hub-card.solved .debug-hub-card-icon {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+.debug-hub-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.debug-hub-card-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.debug-hub-card-header h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-heading);
+}
+
+.debug-hub-card-difficulty {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.debug-hub-card-status {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+.debug-hub-card-status.solved {
+  color: #22c55e;
+}
+
+.debug-hub-card-arrow {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  transition: transform 0.15s;
+}
+
+.debug-hub-card:hover .debug-hub-card-arrow {
+  transform: translateX(3px);
+}
+
+.debug-hub-footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.debug-hub-reset {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.debug-hub-reset:hover {
+  border-color: #ef4444;
+  color: #ef4444;
+}

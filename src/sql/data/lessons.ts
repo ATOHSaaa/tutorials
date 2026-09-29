@@ -32,7 +32,6 @@ export const lessons: Lesson[] = [
 |----|----------|-----------------|-----|
 | 1  | 田中太郎 | taro@example.com| 28  |
 | 2  | 鈴木花子 | hanako@ex.com   | 34  |`,
-        tip: 'デモでテーブルの構造を確認してみてください。',
       },
       {
         heading: 'RDBMS とは',
@@ -60,7 +59,6 @@ SELECT name, email FROM users;`,
         heading: '列を指定する理由',
         content:
           '*（すべての列）を使うのは手軽ですが、必要な列だけ指定する方がパフォーマンスが良いです。本番環境では SELECT name, email のように必要最小限の列を指定するのがベストプラクティスです。',
-        tip: 'デモで SELECT * と SELECT name の違いを試してみてください。',
       },
     ],
   },
@@ -117,7 +115,6 @@ SELECT * FROM posts ORDER BY created_at DESC LIMIT 3;
 
 -- オフセット付き（2件目から3件）
 SELECT * FROM users LIMIT 3 OFFSET 1;`,
-        tip: 'デモで並び替えと件数制限を試してみてください。',
       },
     ],
   },
@@ -142,7 +139,6 @@ INNER JOIN orders ON users.id = orders.user_id;`,
 SELECT users.name, orders.product
 FROM users
 LEFT JOIN orders ON users.id = orders.user_id;`,
-        tip: 'デモで JOIN の結果を確認してください。',
       },
     ],
   },
@@ -165,7 +161,6 @@ SELECT MIN(price) FROM products;       -- 最低価格`,
         heading: '実務での使いどころ',
         content:
           '管理画面の「総ユーザー数」「今月の売上」「平均注文額」などは、すべて集計関数で取得しています。API のレスポンスに含まれる stats オブジェクトの中身も、多くはこの種のクエリです。',
-        tip: 'デモで集計結果を確認してみてください。',
       },
     ],
   },

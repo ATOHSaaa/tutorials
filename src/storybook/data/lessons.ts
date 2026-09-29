@@ -25,7 +25,6 @@ export const lessons: Lesson[] = [
       {
         heading: "主なメリット",
         content: "①デザイナーとエンジニアの共通言語 ②回帰テストの基盤 ③ドキュメントの自動生成 ④エッジケースの視覚的確認。\n\nデザインシステム（Material UI、Chakra UI 等）の開発では Storybook がほぼ必須ツールです。",
-        tip: "デモで Button コンポーネントの size・variant バリエーションを切り替えてみてください。"
       },
       {
         heading: "対応フレームワーク",
@@ -92,7 +91,6 @@ export const lessons: Lesson[] = [
       {
         heading: "Actions",
         content: "onClick などのイベントハンドラは action: \"clicked\" で Actions パネルにログ出力されます。ユーザー操作のシミュレーション確認に便利です。",
-        tip: "デモで Controls パネルから variant を変更し、コンポーネントの見た目が即座に変わることを確認してみてください。"
       }
     ]
   },
@@ -172,7 +170,6 @@ export const lessons: Lesson[] = [
       {
         heading: "カスタムアドオン",
         content: "独自のアドオンを作成して、デザイントークンの切り替えや API モック状態の管理など、プロジェクト固有の機能を追加できます。",
-        tip: "デモで Viewport を切り替え、レスポンシブデザインを確認してみてください。"
       }
     ]
   },

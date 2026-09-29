@@ -27,7 +27,6 @@ export const lessons: Lesson[] = [
         heading: 'JavaScript が動く場所',
         content:
           'もともと JavaScript はブラウザの中で動く言語として生まれました。今ではサーバー（Node.js）、スマホアプリ、デスクトップアプリなど、さまざまな場所で使われています。\n\nこのチュートリアルでは、まずブラウザでの基本を学びます。HTML と CSS の知識があると理解がスムーズです。',
-        tip: 'デモのボタンを押して、JavaScript が画面を変える例を見てみてください。',
       },
       {
         heading: 'コードの書き方',
@@ -62,7 +61,6 @@ age = 26;                // OK
         code: `const userName = "太郎";   // ✓ わかりやすい
 const user_age = 25;       // ✓ アンダースコアも OK
 // const 1name = "x";      // ✗ 数字から始められない`,
-        tip: 'デモで変数の値を変えて、表示がどう変わるか確認してください。',
       },
     ],
   },
@@ -89,7 +87,6 @@ const empty = null;               // null`,
 typeof 42         // "number"
 typeof true       // "boolean"
 typeof undefined  // "undefined"`,
-        tip: 'デモでさまざまな値の型を確認してみてください。',
       },
     ],
   },
@@ -156,7 +153,6 @@ if (score >= 90) {
 
 // 三項演算子
 const label = score >= 60 ? "合格" : "不合格";`,
-        tip: 'デモで点数を変えて、表示がどう切り替わるか試してみてください。',
       },
     ],
   },
@@ -190,7 +186,6 @@ while (count < 3) {
   console.log(count);
   count++;  // count を 1 増やす
 }`,
-        tip: 'デモでループの動きを確認してください。',
       },
     ],
   },
@@ -225,7 +220,6 @@ function add(a, b) {
 const add = (a, b) => a + b;
 
 add(2, 3);  // 5`,
-        tip: 'デモで関数を呼び出して、結果を確認してください。',
       },
     ],
   },
@@ -260,7 +254,6 @@ user.age      // 25
 
 // JSON 形式（API でよく使う）
 JSON.stringify(user);`,
-        tip: 'デモで配列の操作を試してみてください。',
       },
     ],
   },
@@ -291,7 +284,6 @@ title.classList.add("highlight");`,
 button.addEventListener("click", () => {
   alert("クリックされました！");
 });`,
-        tip: 'デモのボタンをクリックして、DOM が変わるのを確認してください。',
       },
     ],
   },

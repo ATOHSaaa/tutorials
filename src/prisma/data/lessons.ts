@@ -25,7 +25,6 @@ export const lessons: Lesson[] = [
       {
         heading: "Prisma の3コンポーネント",
         content: "Prisma Schema — DB 構造を宣言的に定義。Prisma Client — 自動生成される型安全なクエリ API。Prisma Migrate — スキーマ変更を SQL マイグレーションとして管理。\n\nこの3つが連携し、「スキーマを書く → マイグレーション → 型安全にクエリ」という開発フローを実現します。",
-        tip: "デモで schema.prisma のモデル定義と生成される TypeScript 型の対応を確認してみてください。"
       },
       {
         heading: "対応データベース",
@@ -179,7 +178,6 @@ export const lessons: Lesson[] = [
       {
         heading: "分離レベル",
         content: "デフォルトの分離レベルは DB に依存します。高い分離レベルは整合性が強いがデッドロックのリスクも上がります。決済や在庫管理ではトランザクションの理解が必須です。",
-        tip: "デモでトランザクション途中のエラー時にデータがロールバックされることを確認してみてください。"
       }
     ]
   },

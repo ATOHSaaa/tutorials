@@ -4,6 +4,8 @@ import { Hub } from './pages/Hub'
 import { MyPage } from './pages/MyPage'
 import { QuizHub } from './pages/QuizHub'
 import { CourseQuiz } from './pages/CourseQuiz'
+import { DebugHub } from './pages/DebugHub'
+import { DebugChallenge } from './pages/DebugChallenge'
 import ReactTutorial from './react/App'
 import HtmlTutorial from './html/App'
 import CssTutorial from './css/App'
@@ -64,6 +66,8 @@ export default function App() {
         <Route path="/mypage" element={<MyPage />} />
         <Route path="/quizzes" element={<QuizHub />} />
         <Route path="/quizzes/:courseId" element={<CourseQuiz />} />
+        <Route path="/debug" element={<DebugHub />} />
+        <Route path="/debug/:challengeId" element={<DebugChallenge />} />
         <Route path="/html" element={<HtmlTutorial />} />
         <Route path="/html/:lessonId" element={<HtmlTutorial />} />
         <Route path="/css" element={<CssTutorial />} />
